@@ -1,0 +1,28 @@
+.courses {
+  background: var(--white);
+  padding: clamp(40px, 5vw, 72px) 64px 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .courses {
+    padding-inline: 24px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
