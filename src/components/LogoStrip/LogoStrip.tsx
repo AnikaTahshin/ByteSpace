@@ -5,7 +5,7 @@ const LOGOS = [
   '/assets/images/icon_2.png',
   '/assets/images/icon_3.png',
   '/assets/images/icon_4.png',
-  '/assets/images/icon_5.png',
+  '/assets/images/logo_5.png',
 ]
 
 function LogoStrip() {

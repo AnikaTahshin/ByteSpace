@@ -33,7 +33,7 @@ function Hero() {
 
         {/* Floating info cards */}
         <InfoCard className={styles.cardDesign} title="UI/UX Design">
-          <p className={styles.cardNote}>100+ Courses, 10,000+ Students</p>
+          <p className={styles.cardNote}>200 Courses, 1000+ Students</p>
         </InfoCard>
 
         <InfoCard className={styles.cardProgress} title="Learning Progress">
@@ -53,7 +53,12 @@ function Hero() {
         <InfoCard className={styles.cardStudents} title="Happy Students">
           <p className={styles.rating}>
             <strong>4.5</strong>
-            <span>(5k Reviews)</span>
+            <span>(240)</span>
+            <img
+              className={styles.starGreen}
+              src="/assets/images/star_green.png"
+              alt=""
+            />
           </p>
           <AvatarStack labels={['JR', 'MK', 'SA', 'TL', 'NP']} badge="3k+" />
         </InfoCard>

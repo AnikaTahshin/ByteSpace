@@ -2,6 +2,9 @@ import Navbar from './components/Navbar/Navbar'
 import Hero from './components/Hero/Hero'
 import DecorShapes from './components/DecorShapes/DecorShapes'
 import LogoStrip from './components/LogoStrip/LogoStrip'
+import Categories from './components/Categories/Categories'
+import Courses from './components/Courses/Courses'
+import LearningPaths from './components/LearningPaths/LearningPaths'
 import styles from './App.module.css'
 
 function App() {
@@ -15,6 +18,9 @@ function App() {
         </main>
       </div>
       <LogoStrip />
+      <Categories />
+      <Courses />
+      <LearningPaths />
     </>
   )
 }
