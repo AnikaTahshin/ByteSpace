@@ -81,19 +81,11 @@ function Growth() {
               </div> */}
             </InfoCard>
 
-            <InfoCard className={styles.cardProgress} title="Learning Progress">
-              <p className={styles.progressValue}>55%</p>
-              <div
-                className={styles.progressTrack}
-                role="progressbar"
-                aria-valuenow={55}
-                aria-valuemin={0}
-                aria-valuemax={100}
-                aria-label="Learning progress"
-              >
-                <div className={styles.progressFill} />
-              </div>
-            </InfoCard>
+            <img
+              className={styles.cardProgress}
+              src="/assets/images/lp_img.png"
+              alt="Learning progress: 55%"
+            />
           </div>
         </div>
 

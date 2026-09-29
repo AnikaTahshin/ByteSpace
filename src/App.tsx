@@ -6,6 +6,8 @@ import Categories from './components/Categories/Categories'
 import Courses from './components/Courses/Courses'
 import LearningPaths from './components/LearningPaths/LearningPaths'
 import Growth from './components/Growth/Growth'
+import CreatorCta from './components/CreatorCta/CreatorCta'
+// import Testimonials from './components/Testimonials/Testimonials'
 import styles from './App.module.css'
 
 function App() {
@@ -23,6 +25,8 @@ function App() {
       <Courses />
       <LearningPaths />
       <Growth />
+      <CreatorCta />
+      {/* <Testimonials /> */}
     </>
   )
 }
