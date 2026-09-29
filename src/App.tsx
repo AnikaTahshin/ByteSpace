@@ -11,6 +11,8 @@ import CreatorCta from './components/CreatorCta/CreatorCta'
 import Testimonials from './components/Testimonials/Testimonials'
 import Footer from './components/Footer/Footer'
 import CoursesPage from './components/CoursesPage/CoursesPage'
+import CourseDetailsPage from './components/CourseDetailsPage/CourseDetailsPage'
+import { getCourseBySlug } from './data/courses'
 import styles from './App.module.css'
 
 function useHashRoute() {
@@ -25,6 +27,20 @@ function useHashRoute() {
 
 function App() {
   const hash = useHashRoute()
+
+  if (hash.startsWith('#/courses/')) {
+    const slug = hash.slice('#/courses/'.length)
+    const course = getCourseBySlug(slug)
+    if (course) {
+      return (
+        <>
+          <CourseDetailsPage course={course} />
+          <div className={styles.pageDivider} />
+          <Footer />
+        </>
+      )
+    }
+  }
 
   if (hash.startsWith('#/courses')) {
     return (

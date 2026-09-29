@@ -2,15 +2,7 @@ import { useState } from 'react'
 import styles from './CoursesPage.module.css'
 import Navbar from '../Navbar/Navbar'
 import CourseCard from '../CourseCard/CourseCard'
-
-const BASE_COURSES = [
-  { title: 'Learn Figma from Basic', image: '/assets/images/courses/course_1.png' },
-  { title: 'Build Digital Asset', image: '/assets/images/courses/course_2.png' },
-  { title: 'The Power of Big Data', image: '/assets/images/courses/course_3.png' },
-  { title: 'Balancing Productivity and Life', image: '/assets/images/courses/course_4.png' },
-  { title: 'Mastering Money Management', image: '/assets/images/courses/course_5.png' },
-  { title: 'From Idea to Startup Success', image: '/assets/images/courses/course_6.png' },
-]
+import { COURSES as BASE_COURSES } from '../../data/courses'
 
 const PAGE_SIZE = 12
 const TOTAL_PAGES = 5
@@ -147,16 +139,21 @@ function CoursesPage() {
 
         <div className={styles.grid}>
           {visibleCourses.map((course, i) => (
-            <CourseCard
-              key={`${course.title}-${i}`}
-              image={course.image}
-              title={course.title}
-              rating={4.5}
-              author="popupart studio"
-              level="Beginner"
-              price={25}
-              note="Lifetime"
-            />
+            <a
+              key={`${course.slug}-${i}`}
+              className={styles.cardLink}
+              href={`#/courses/${course.slug}`}
+            >
+              <CourseCard
+                image={course.image}
+                title={course.title}
+                rating={course.rating}
+                author={course.author}
+                level={course.level}
+                price={course.price}
+                note={course.note}
+              />
+            </a>
           ))}
         </div>
 
