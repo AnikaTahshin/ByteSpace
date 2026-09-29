@@ -1,7 +1,6 @@
 import styles from './Hero.module.css'
 import SearchBar from '../SearchBar/SearchBar'
 import InfoCard from '../InfoCard/InfoCard'
-import AvatarStack from '../AvatarStack/AvatarStack'
 
 function Hero() {
   return (
@@ -60,7 +59,11 @@ function Hero() {
               alt=""
             />
           </p>
-          <AvatarStack labels={['JR', 'MK', 'SA', 'TL', 'NP']} badge="3k+" />
+          <img
+            className={styles.peopleStack}
+            src="/assets/images/people_1.png"
+            alt="Photos of happy students"
+          />
         </InfoCard>
 
         

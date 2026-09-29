@@ -134,6 +134,12 @@
   align-self: center;
 }
 
+.peopleStack {
+  width: 162px;
+  height: 30px;
+  margin-top: 10px;
+}
+
 /* ---- Responsive ---- */
 
 @media (max-width: 820px) {

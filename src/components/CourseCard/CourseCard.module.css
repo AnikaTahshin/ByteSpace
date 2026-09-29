@@ -84,6 +84,10 @@
   color: #4d4e55;
 }
 
+.peopleStack {
+  height: 30px;
+}
+
 .price {
   margin-top: 14px;
   font-size: 18px;
