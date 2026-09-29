@@ -67,10 +67,10 @@ function Growth() {
             <InfoCard className={styles.cardCourse}>
               <img
                 className={styles.courseThumb}
-                src="/assets/images/courses/course_1.png"
+                src="/assets/images/course_card_back.png"
                 alt=""
               />
-              <p className={styles.courseTitle}>Learn Figma from Scratch</p>
+              {/* <p className={styles.courseTitle}>Learn Figma from Scratch</p>
               <p className={styles.courseNote}>to jumpstart Skills</p>
               <div className={styles.courseTrack}>
                 <div className={styles.courseFill} />
@@ -78,7 +78,7 @@ function Growth() {
               <div className={styles.courseMeta}>
                 <span className={styles.courseLevel}>Beginner</span>
                 <span className={styles.coursePrice}>$25</span>
-              </div>
+              </div> */}
             </InfoCard>
 
             <InfoCard className={styles.cardProgress} title="Learning Progress">
