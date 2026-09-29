@@ -16,3 +16,8 @@
   display: flex;
   flex-direction: column;
 }
+
+.pageDivider {
+  height: 1px;
+  background: #ececf0;
+}

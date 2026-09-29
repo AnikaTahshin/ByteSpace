@@ -4,23 +4,24 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 26px 64px;
+  padding: 35px 122px 31px;
 }
 
 .brand {
   display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-family: var(--font-display);
-  font-size: 24px;
+  align-items: baseline;
+  gap: 7px;
+  font-family: "Clash Display", sans-serif;
+  font-size: 26px;
   font-weight: 700;
+  line-height: 1;
   color: var(--white);
   text-decoration: none;
 }
 
 .brandMark {
-  width: 30px;
-  height: auto;
+  width: 28.875px;
+  height: 31.5px;
 }
 
 .links {
@@ -36,6 +37,7 @@
 .links a {
   color: rgba(255, 255, 255, 0.85);
   text-decoration: none;
+  font-family: "Satoshi", sans-serif;
   font-size: 16px;
   font-weight: 400;
   transition: color 0.2s ease;
@@ -47,6 +49,7 @@
 
 .links a.active {
   color: var(--white);
+  font-family: "Satoshi", sans-serif;
   font-size: 16px;
   font-weight: 500;
 }
@@ -63,6 +66,7 @@
   text-decoration: none;
   font-size: 16px;
   font-weight: 400;
+  font-family: "Satoshi", sans-serif;
 }
 
 .signIn:hover,
