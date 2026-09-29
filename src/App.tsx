@@ -8,6 +8,7 @@ import LearningPaths from './components/LearningPaths/LearningPaths'
 import Growth from './components/Growth/Growth'
 import CreatorCta from './components/CreatorCta/CreatorCta'
 import Testimonials from './components/Testimonials/Testimonials'
+import Footer from './components/Footer/Footer'
 import styles from './App.module.css'
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
       <Growth />
       <CreatorCta />
       <Testimonials />
+      <Footer />
     </>
   )
 }
