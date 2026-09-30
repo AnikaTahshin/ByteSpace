@@ -366,6 +366,29 @@
     padding: 32px 24px 24px;
   }
 
+  .collage {
+    padding: 32px 0 90px;
+  }
+
+  .cardBack {
+    width: 100%;
+    margin-top: 60px;
+  }
+
+  .cardFront {
+    width: min(310px, 96%);
+    top: 0;
+    right: 0;
+  }
+
+  .shapeTorus {
+    left: 40px;
+  }
+
+  .shapeCone {
+    left: -12px;
+  }
+
   .cardFront {
     right: 0;
   }
@@ -376,5 +399,23 @@
 
   .shapeSpring {
     right: 0;
+  }
+}
+
+@media (max-width: 420px) {
+  .pitchTitle {
+    font-size: 18px;
+  }
+
+  .pitchText {
+    font-size: 13px;
+  }
+
+  .formTitle {
+    font-size: 26px;
+  }
+
+  .cardTitle {
+    font-size: 13px;
   }
 }

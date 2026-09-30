@@ -15,45 +15,76 @@ import CreatorsPage from './components/CreatorsPage/CreatorsPage'
 import SignUpPage from './components/SignUpPage/SignUpPage'
 import SignInPage from './components/SignInPage/SignInPage'
 import CourseDetailsPage from './components/CourseDetailsPage/CourseDetailsPage'
+import NotFoundPage from './components/NotFoundPage/NotFoundPage'
 import { getCourseBySlug } from './data/courses'
 import styles from './App.module.css'
 
 function useHashRoute() {
-  const [hash, setHash] = useState(() => window.location.hash)
+  const [route, setRoute] = useState(() => ({
+    pathname: window.location.pathname,
+    hash: window.location.hash,
+  }))
   useEffect(() => {
-    const onHashChange = () => setHash(window.location.hash)
-    window.addEventListener('hashchange', onHashChange)
-    return () => window.removeEventListener('hashchange', onHashChange)
+    const onRouteChange = () =>
+      setRoute({
+        pathname: window.location.pathname,
+        hash: window.location.hash,
+      })
+    window.addEventListener('hashchange', onRouteChange)
+    window.addEventListener('popstate', onRouteChange)
+    return () => {
+      window.removeEventListener('hashchange', onRouteChange)
+      window.removeEventListener('popstate', onRouteChange)
+    }
   }, [])
-  return hash
+  return route
 }
 
 function App() {
-  const hash = useHashRoute()
+  const { pathname, hash } = useHashRoute()
+
+  // this app routes through the hash only — anything typed after the base
+  // url as a real path (e.g. /signin/ or /foo) has no page
+  if (pathname !== '/' && pathname !== '/index.html') {
+    return (
+      <>
+        <NotFoundPage />
+        <div className={styles.pageDivider} />
+        <Footer />
+      </>
+    )
+  }
 
   if (hash.startsWith('#/courses/')) {
     const slug = hash.slice('#/courses/'.length)
     const course = getCourseBySlug(slug)
-    if (course) {
+    if (!course) {
       return (
         <>
-          <CourseDetailsPage course={course} />
+          <NotFoundPage />
           <div className={styles.pageDivider} />
           <Footer />
         </>
       )
     }
+    return (
+      <>
+        <CourseDetailsPage course={course} />
+        <div className={styles.pageDivider} />
+        <Footer />
+      </>
+    )
   }
 
-  if (hash.startsWith('#/signup')) {
+  if (hash === '#/signup') {
     return <SignUpPage />
   }
 
-  if (hash.startsWith('#/signin')) {
+  if (hash === '#/signin') {
     return <SignInPage />
   }
 
-  if (hash.startsWith('#/creators')) {
+  if (hash === '#/creators') {
     return (
       <>
         <CreatorsPage />
@@ -63,7 +94,7 @@ function App() {
     )
   }
 
-  if (hash.startsWith('#/courses')) {
+  if (hash === '#/courses') {
     return (
       <>
         <CoursesPage />
@@ -73,22 +104,32 @@ function App() {
     )
   }
 
+  if (hash === '' || hash === '#' || hash === '#/') {
+    return (
+      <>
+        <div className={styles.landing}>
+          <DecorShapes />
+          <Navbar />
+          <main className={styles.main}>
+            <Hero />
+          </main>
+        </div>
+        <LogoStrip />
+        <Categories />
+        <Courses />
+        <LearningPaths />
+        <Growth />
+        <CreatorCta />
+        <Testimonials />
+        <Footer />
+      </>
+    )
+  }
+
   return (
     <>
-      <div className={styles.landing}>
-        <DecorShapes />
-        <Navbar />
-        <main className={styles.main}>
-          <Hero />
-        </main>
-      </div>
-      <LogoStrip />
-      <Categories />
-      <Courses />
-      <LearningPaths />
-      <Growth />
-      <CreatorCta />
-      <Testimonials />
+      <NotFoundPage />
+      <div className={styles.pageDivider} />
       <Footer />
     </>
   )

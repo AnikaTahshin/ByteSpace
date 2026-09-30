@@ -418,12 +418,92 @@
     align-items: flex-start;
   }
 
+  /* keep the desktop composition: fixed-aspect stage, proportional cards */
   .stageLearner,
   .stageCreator {
-    width: min(100%, 400px);
+    width: min(100%, 460px);
+    height: auto;
+    aspect-ratio: 460 / 420;
+  }
+
+  .stageCreator {
+    aspect-ratio: 460 / 460;
+  }
+
+  .learner {
+    right: 0;
+    height: 100%;
+  }
+
+  .creator {
+    left: 10%;
+    height: 100%;
+  }
+
+  .squiggleTop {
+    top: 6%;
+    right: 2%;
+    width: clamp(80px, 28%, 135px);
+  }
+
+  .squiggleMiddle {
+    top: 8%;
+    right: 18%;
+    width: clamp(80px, 28%, 135px);
+  }
+
+  .cardCourse {
+    left: 0;
+    top: 6%;
+    width: clamp(130px, 42%, 190px);
+  }
+
+  .courseThumb {
+    width: 100%;
+  }
+
+  .cardProgress {
+    top: 34%;
+    right: 0;
+    width: clamp(150px, 52%, 200px);
+  }
+
+  .cardRevenue {
+    top: 0;
+    left: 0;
+    width: clamp(130px, 44%, 170px);
   }
 
   .cardEarning {
-    top: 34%;
+    top: 26%;
+    left: 0;
+  }
+
+  .cardStudents {
+    right: 0;
+    bottom: 4%;
+  }
+
+  .peopleStack {
+    width: clamp(100px, 44%, 150px);
+  }
+}
+
+@media (max-width: 420px) {
+  .heading {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    margin-top: 14px;
+    font-size: 14px;
+  }
+
+  .statValue {
+    font-size: 24px;
+  }
+
+  .benefit {
+    font-size: 14px;
   }
 }

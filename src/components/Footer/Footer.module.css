@@ -15,11 +15,9 @@
   gap: clamp(48px, 6vw, 120px);
 }
 
-/* ---- newsletter ---- */
-
 .brand {
   display: inline-flex;
-  align-items: center;
+  align-items: flex-end;
   gap: 8px;
   font-family: 'Clash Display', var(--font-body), sans-serif;
   font-size: 24px;
@@ -33,6 +31,7 @@
 .brandMark {
   width: 26px;
   height: 26px;
+  margin-bottom: 1px;
 }
 
 .newsletterText {
@@ -53,7 +52,9 @@
 }
 
 .input {
-  width: 240px;
+  flex: 1;
+  min-width: 0;
+  max-width: 240px;
   padding: 12px 20px;
   border: 1px solid #d7d9e0;
   border-radius: 999px;
@@ -100,15 +101,12 @@
   color: #242528
 }
 
-/* ---- link columns ---- */
-
 .links {
   display: grid;
   grid-template-columns: repeat(3, auto);
   gap: clamp(32px, 4vw, 72px);
   justify-content: space-between;
   padding-top: 8px;
-  
 }
 
 .linkColumn {
@@ -121,9 +119,7 @@
 }
 
 .link {
-
-    font-family: 'Satoshi', var(--font-body), sans-serif;
-
+  font-family: 'Satoshi', var(--font-body), sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 160%;
@@ -136,8 +132,6 @@
   color: var(--blue);
 }
 
-/* ---- bottom bar ---- */
-
 .bottom {
   display: flex;
   align-items: center;
@@ -149,8 +143,7 @@
 }
 
 .copyright {
-      font-family: 'Satoshi', var(--font-body), sans-serif;
-
+  font-family: 'Satoshi', var(--font-body), sans-serif;
   font-size: 12px;
   font-weight: 400;
   line-height: 160%;
@@ -169,8 +162,6 @@
   font-family: 'Satoshi', var(--font-body), sans-serif;
 }
 
-/* ---- Responsive ---- */
-
 @media (max-width: 900px) {
   .footer {
     padding-inline: 24px;
@@ -182,10 +173,22 @@
 
   .links {
     justify-content: start;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 24px;
+  }
+
+  .form {
+    flex-wrap: wrap;
   }
 
   .bottom {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+@media (max-width: 360px) {
+  .footer {
+    padding-inline: 16px;
   }
 }
