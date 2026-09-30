@@ -172,7 +172,7 @@ function SignUpPage() {
 
           <p className={styles.loginLine}>
             Already have an account?{' '}
-            <a className={styles.loginLink} href="#/signup">
+            <a className={styles.loginLink} href="#/signin">
               Login
             </a>
           </p>
