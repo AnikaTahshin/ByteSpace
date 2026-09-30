@@ -11,6 +11,7 @@ import CreatorCta from './components/CreatorCta/CreatorCta'
 import Testimonials from './components/Testimonials/Testimonials'
 import Footer from './components/Footer/Footer'
 import CoursesPage from './components/CoursesPage/CoursesPage'
+import CreatorsPage from './components/CreatorsPage/CreatorsPage'
 import CourseDetailsPage from './components/CourseDetailsPage/CourseDetailsPage'
 import { getCourseBySlug } from './data/courses'
 import styles from './App.module.css'
@@ -40,6 +41,16 @@ function App() {
         </>
       )
     }
+  }
+
+  if (hash.startsWith('#/creators')) {
+    return (
+      <>
+        <CreatorsPage />
+        <div className={styles.pageDivider} />
+        <Footer />
+      </>
+    )
   }
 
   if (hash.startsWith('#/courses')) {
