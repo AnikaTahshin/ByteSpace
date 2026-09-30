@@ -23,22 +23,10 @@ const CATEGORIES = [
 function CoursesPage() {
   const [query, setQuery] = useState('')
   const [activeCategory, setActiveCategory] = useState('Featured')
-  const [page, setPage] = useState(1)
 
   const filteredCourses = COURSES.filter((course) =>
     course.title.toLowerCase().includes(query.trim().toLowerCase()),
   )
-  const pageCount = Math.max(1, Math.ceil(filteredCourses.length / PAGE_SIZE))
-  const currentPage = Math.min(page, pageCount)
-  const visibleCourses = filteredCourses.slice(
-    (currentPage - 1) * PAGE_SIZE,
-    currentPage * PAGE_SIZE,
-  )
-
-  const goToPage = (n: number) => {
-    setPage(n)
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }
 
   return (
     <>
@@ -58,10 +46,7 @@ function CoursesPage() {
               placeholder="Search"
               aria-label="Search courses"
               value={query}
-              onChange={(e) => {
-                setQuery(e.target.value)
-                setPage(1)
-              }}
+              onChange={(e) => setQuery(e.target.value)}
             />
           </div>
           <button type="button" className={styles.categoryButton}>
@@ -127,10 +112,7 @@ function CoursesPage() {
               ]
                 .filter(Boolean)
                 .join(' ')}
-              onClick={() => {
-                setActiveCategory(category)
-                setPage(1)
-              }}
+              onClick={() => setActiveCategory(category)}
             >
               {category}
             </button>
@@ -138,7 +120,7 @@ function CoursesPage() {
         </div>
 
         <div className={styles.grid}>
-          {visibleCourses.map((course, i) => (
+          {filteredCourses.map((course, i) => (
             <a
               key={`${course.slug}-${i}`}
               className={styles.cardLink}
@@ -157,60 +139,58 @@ function CoursesPage() {
           ))}
         </div>
 
-        {visibleCourses.length === 0 && (
+        {filteredCourses.length === 0 && (
           <p className={styles.empty}>
             No courses found for &ldquo;{query}&rdquo;.
           </p>
         )}
 
-        {pageCount > 1 && (
-          <nav className={styles.pagination} aria-label="Pagination">
-            <button
-              type="button"
-              className={styles.pageArrow}
-              disabled={currentPage === 1}
-              onClick={() => goToPage(currentPage - 1)}
-              aria-label="Previous page"
-            >
-              <img
-                className={`${styles.pageArrowIcon} ${styles.pageArrowIconLeft}`}
-                src="/assets/images/courses/drop_arrow.png"
-                alt=""
-              />
-            </button>
+        <nav className={styles.pagination} aria-hidden="true">
+          <button
+            type="button"
+            className={styles.pageArrow}
+            disabled
+            tabIndex={-1}
+            aria-label="Previous page"
+          >
+            <img
+              className={`${styles.pageArrowIcon} ${styles.pageArrowIconLeft}`}
+              src="/assets/images/courses/drop_arrow.png"
+              alt=""
+            />
+          </button>
 
-            {Array.from({ length: pageCount }, (_, i) => i + 1).map((n) => (
-              <button
-                key={n}
-                type="button"
-                className={[
-                  styles.pageNumber,
-                  n === currentPage ? styles.pageNumberActive : undefined,
-                ]
-                  .filter(Boolean)
-                  .join(' ')}
-                aria-current={n === currentPage ? 'page' : undefined}
-                onClick={() => goToPage(n)}
-              >
-                {n}
-              </button>
-            ))}
-
+          {Array.from({ length: TOTAL_PAGES }, (_, i) => i + 1).map((n) => (
             <button
+              key={n}
               type="button"
-              className={styles.pageArrow}
-              disabled={currentPage === pageCount}
-              onClick={() => goToPage(currentPage + 1)}
-              aria-label="Next page"
+              className={[
+                styles.pageNumber,
+                n === 1 ? styles.pageNumberActive : undefined,
+              ]
+                .filter(Boolean)
+                .join(' ')}
+              disabled
+              tabIndex={-1}
             >
-              <img
-                className={`${styles.pageArrowIcon} ${styles.pageArrowIconRight}`}
-                src="/assets/images/courses/drop_arrow.png"
-                alt=""
-              />
+              {n}
             </button>
-          </nav>
-        )}
+          ))}
+
+          <button
+            type="button"
+            className={styles.pageArrow}
+            disabled
+            tabIndex={-1}
+            aria-label="Next page"
+          >
+            <img
+              className={`${styles.pageArrowIcon} ${styles.pageArrowIconRight}`}
+              src="/assets/images/courses/drop_arrow.png"
+              alt=""
+            />
+          </button>
+        </nav>
       </section>
     </>
   )

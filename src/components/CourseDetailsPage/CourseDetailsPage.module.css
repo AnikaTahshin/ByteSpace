@@ -708,6 +708,11 @@
     grid-template-columns: 1fr;
   }
 
+  /* single column: no straddle, or the card would cover the tab buttons */
+  .detailsCard {
+    margin-bottom: 0;
+  }
+
   .bodyContent {
     max-width: 100%;
   }
@@ -728,5 +733,34 @@
 
   .highlightRow {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .titleRow {
+    flex-wrap: wrap;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .ratingCard {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 420px) {
+  .title {
+    font-size: 23px;
+  }
+
+  .videoThumb {
+    min-height: 240px;
+  }
+
+  .highlightImage {
+    height: 90px;
   }
 }

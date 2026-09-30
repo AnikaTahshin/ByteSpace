@@ -147,23 +147,11 @@
     display: none;
   }
 
+  /* keep the desktop-like composition: person centered, cards floating */
   .stage {
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 18px;
-    padding: 0 20px;
-  }
-
-  .arch,
-  .person,
-  .cardDesign,
-  .cardProgress,
-  .cardStudents,
-  .nameTag {
-    position: static;
-    transform: none;
+    height: clamp(340px, 108vw, 470px);
+    margin-top: 8px;
+    padding: 0;
   }
 
   .arch {
@@ -171,10 +159,78 @@
   }
 
   .person {
-    height: 320px;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 100%;
+  }
+
+  .cardDesign {
+    left: 2%;
+    top: 4%;
+  }
+
+  .cardProgress {
+    left: auto;
+    right: 2%;
+    top: 16%;
+  }
+
+  .cardStudents {
+    left: 3%;
+    top: auto;
+    bottom: 4%;
+  }
+
+  .peopleStack {
+    width: 130px;
   }
 
   .cardProgress .progressTrack {
     width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cardDesign {
+    left: 0;
+  }
+
+  .cardProgress {
+    right: 0;
+  }
+
+  .cardStudents {
+    left: 0;
+  }
+
+  .peopleStack {
+    width: 110px;
+  }
+}
+
+@media (max-width: 420px) {
+  .heading {
+    font-size: 30px;
+  }
+
+  .subtitle {
+    margin-top: 12px;
+    font-size: 14px;
+  }
+
+  .stage {
+    height: clamp(270px, 95vw, 350px);
+  }
+
+  .progressValue {
+    font-size: 26px;
+  }
+
+  .progressTrack {
+    width: 100px !important;
+  }
+
+  .peopleStack {
+    width: 96px;
   }
 }
