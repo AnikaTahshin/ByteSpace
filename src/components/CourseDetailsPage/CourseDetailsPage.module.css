@@ -14,8 +14,6 @@
 .heroContent {
   max-width: 1240px;
   margin: 0 auto;
-  /* bottom padding stops the grid's negative margin from collapsing through,
-     so the hero (blue) ends above the overhanging details card */
   padding: 24px 64px 1px;
 }
 
@@ -113,8 +111,6 @@
   gap: 40px;
   align-items: start;
   margin-top: 36px;
-  /* lets the details card straddle the blue hero and the white body below */
-  margin-bottom: -238px;
 }
 
 .videoCard {
@@ -140,6 +136,10 @@
   border-radius: 16px;
   box-shadow: 0 18px 44px rgba(3, 10, 60, 0.28);
   text-align: left;
+  /* lets the details card straddle the blue hero and the white body below;
+     on the card (not the grid) so the grid's box doesn't cover the body's
+     tab buttons and swallow their clicks */
+  margin-bottom: -238px;
 }
 
 .lessonsLabel {
@@ -516,6 +516,189 @@
   margin-top: 28px;
   font-size: 14px;
   color: var(--muted);
+}
+
+/* ---- Reviews tab ---- */
+
+.ratingCard {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-top: 16px;
+  padding: 20px 22px;
+  background: var(--white);
+  border: 1px solid #ececf0;
+  border-radius: 12px;
+}
+
+.ratingScore {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  padding: 18px 26px;
+  background: var(--lime);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.ratingScoreLabel {
+  font-size: 12px;
+  color: #242528;
+}
+
+.ratingScoreValue {
+  font-family: 'Poppins', var(--font-body), sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #242528;
+}
+
+.ratingRows {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.ratingRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ratingBar {
+  flex: 1;
+  height: 6px;
+  background: #e9edf5;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.ratingBarFill {
+  height: 100%;
+  background: var(--lime);
+  border-radius: 999px;
+}
+
+.ratingStars {
+  font-size: 13px;
+  color: #242528;
+  letter-spacing: 2px;
+  flex-shrink: 0;
+}
+
+.starsDim {
+  color: #d7d9e0;
+}
+
+.ratingCount {
+  min-width: 30px;
+  text-align: right;
+  font-size: 12px;
+  color: var(--muted);
+  flex-shrink: 0;
+}
+
+.reviewChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.chip {
+  padding: 8px 18px;
+  background: var(--white);
+  border: 1px solid #d7d9e0;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink);
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.chip:hover {
+  border-color: var(--ink);
+}
+
+.chipActive {
+  background: var(--lime);
+  border-color: var(--lime);
+}
+
+.reviewList {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.reviewCard {
+  padding: 18px 20px;
+  background: var(--white);
+  border: 1px solid #ececf0;
+  border-radius: 12px;
+}
+
+.reviewHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.reviewPerson {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.reviewAvatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.reviewName {
+  font-size: 14px;
+  font-weight: 700;
+  color: #242528;
+}
+
+.reviewRole {
+  margin-top: 2px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.reviewAgo {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.stars {
+  color: #242528;
+  font-size: 13px;
+  letter-spacing: 3px;
+}
+
+.starsDim {
+  color: #d7d9e0;
+}
+
+.reviewStarsRow {
+  margin-top: 10px;
+}
+
+.reviewText {
+  margin-top: 8px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #4f4f4f;
 }
 
 /* ---- Responsive ---- */

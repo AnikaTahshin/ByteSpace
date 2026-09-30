@@ -51,8 +51,61 @@ const MODULES = [
   },
 ]
 
+const RATING_BREAKDOWN = [
+  { stars: 5, count: 700 },
+  { stars: 4, count: 120 },
+  { stars: 3, count: 21 },
+  { stars: 2, count: 12 },
+  { stars: 1, count: 16 },
+]
+
+const REVIEWS = [
+  {
+    name: 'PurePixel Studio',
+    role: 'UI/UX Designer',
+    avatar: '/assets/images/courses/creator.png',
+    ago: 'a year ago',
+    stars: 5,
+    text: 'The course provided me with a comprehensive understanding of digital asset creation. The lessons were in-depth, practical, and immediately applicable to my work. Highly recommended!',
+  },
+  {
+    name: 'Albert Flores',
+    role: 'UI/UX Designer',
+    avatar: '/assets/images/person_3.png',
+    ago: 'a year ago',
+    stars: 5,
+    text: "This course transformed my approach to digital design. The combination of theory, hands-on exercises, and real-world applications made it a truly enriching experience. Excited to implement what I've learned!",
+  },
+  {
+    name: 'Cody Fisher',
+    role: 'UI/UX Designer',
+    avatar: '/assets/images/person_2.png',
+    ago: 'a year ago',
+    stars: 5,
+    text: 'The project showcase and critique module created a collaborative environment where I could showcase my work, receive valuable feedback, and refine my skills. It added a unique and valuable dimension to the learning process.',
+  },
+  {
+    name: 'Brooklyn Simmons',
+    role: 'UI/UX Designer',
+    avatar: '/assets/images/person_1.png',
+    ago: 'a year ago',
+    stars: 4,
+    text: 'The lessons on optimizing digital assets for various platforms were particularly insightful. I now feel confident adapting my designs for web, mobile, and social media.',
+  },
+]
+
+function Stars({ filled, total = 5 }: { filled: number; total?: number }) {
+  return (
+    <span className={styles.stars} aria-hidden="true">
+      {'★'.repeat(filled)}
+      <span className={styles.starsDim}>{'★'.repeat(total - filled)}</span>
+    </span>
+  )
+}
+
 function CourseDetailsPage({ course }: { course: Course }) {
   const [activeTab, setActiveTab] = useState('About')
+  const [ratingFilter, setRatingFilter] = useState<number | 'all'>('all')
   const description = descriptionFor(course)
 
   return (
@@ -303,9 +356,87 @@ function CourseDetailsPage({ course }: { course: Course }) {
         )}
 
         {activeTab === 'Reviews' && (
-          <p className={styles.tabPlaceholder}>
-            Reviews from enrolled learners will appear here.
-          </p>
+          <>
+            <h2 className={styles.sectionTitle}>What Learners Are Saying</h2>
+            <p className={styles.paragraph}>
+              Discover what our learners have to say about their experience
+              with {course.title}: A Comprehensive Guide. Read reviews and
+              ratings from individuals who have embarked on the transformative
+              journey of mastering digital asset creation.
+            </p>
+
+            <div className={styles.ratingCard}>
+              <div className={styles.ratingScore}>
+                <p className={styles.ratingScoreLabel}>Ratings</p>
+                <p className={styles.ratingScoreValue}>{course.rating}</p>
+              </div>
+              <div className={styles.ratingRows}>
+                {RATING_BREAKDOWN.map(({ stars, count }) => (
+                  <div key={stars} className={styles.ratingRow}>
+                    <div className={styles.ratingBar}>
+                      <div
+                        className={styles.ratingBarFill}
+                        style={{ width: `${(count / 700) * 100}%` }}
+                      />
+                    </div>
+                    <span className={styles.ratingStars}>
+                      <Stars filled={stars} />
+                    </span>
+                    <span className={styles.ratingCount}>{count}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <h3 className={styles.subTitle}>Individual Reviews:</h3>
+            <div className={styles.reviewChips} role="tablist" aria-label="Filter reviews by rating">
+              {[0, 5, 4, 3, 2, 1].map((value) => (
+                <button
+                  key={value}
+                  type="button"
+                  role="tab"
+                  aria-selected={ratingFilter === value}
+                  className={[
+                    styles.chip,
+                    ratingFilter === value ? styles.chipActive : undefined,
+                  ]
+                    .filter(Boolean)
+                    .join(' ')}
+                  onClick={() => setRatingFilter(value === 0 ? 'all' : value)}
+                >
+                  {value === 0 ? 'All rating' : `${value}★`}
+                </button>
+              ))}
+            </div>
+
+            <div className={styles.reviewList}>
+              {REVIEWS.filter(
+                (review) =>
+                  ratingFilter === 'all' || review.stars === ratingFilter,
+              ).map((review) => (
+                <article key={review.name} className={styles.reviewCard}>
+                  <div className={styles.reviewHead}>
+                    <div className={styles.reviewPerson}>
+                      <img
+                        className={styles.reviewAvatar}
+                        src={review.avatar}
+                        alt={review.name}
+                      />
+                      <div>
+                        <p className={styles.reviewName}>{review.name}</p>
+                        <p className={styles.reviewRole}>{review.role}</p>
+                      </div>
+                    </div>
+                    <span className={styles.reviewAgo}>{review.ago}</span>
+                  </div>
+                  <p className={styles.reviewStarsRow}>
+                    <Stars filled={review.stars} />
+                  </p>
+                  <p className={styles.reviewText}>{review.text}</p>
+                </article>
+              ))}
+            </div>
+          </>
         )}
         </div>
       </section>
