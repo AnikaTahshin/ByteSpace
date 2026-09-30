@@ -1,5 +1,4 @@
 import styles from './CourseCard.module.css'
-import AvatarStack from '../AvatarStack/AvatarStack'
 
 export interface CourseCardProps {
   image: string
@@ -40,7 +39,11 @@ function CourseCard({ image, title, rating, author, level, price, note }: Course
             </svg>
             {level}
           </span>
-          <AvatarStack labels={['JR', 'MK', 'SA']} badge="3k+" />
+          <img
+            className={styles.peopleStack}
+            src="/assets/images/people_2.png"
+            alt="Students enrolled in this course"
+          />
         </div>
 
         <p className={styles.price}>

@@ -1,18 +1,33 @@
 import styles from './Navbar.module.css'
 
-function Navbar() {
+const NAV_LINKS = [
+  { label: 'Home', href: '#/', id: 'home' },
+  { label: 'Courses', href: '#/courses', id: 'courses' },
+  { label: 'Creators', href: '#/creators', id: 'creators' },
+]
+
+interface NavbarProps {
+  /** id of the currently active link */
+  active?: string
+}
+
+function Navbar({ active = 'home' }: NavbarProps) {
   return (
     <header className={styles.navbar}>
-      <a className={styles.brand} href="#">
+      <a className={styles.brand} href="#/">
         <img className={styles.brandMark} src="/assets/images/logo.png" alt="ByteSpace logo" />
         ByteSpace
       </a>
 
       <nav aria-label="Main navigation">
         <ul className={styles.links}>
-          <li><a href="#" className={styles.active}>Home</a></li>
-          <li><a href="#">Courses</a></li>
-          <li><a href="#">Creators</a></li>
+          {NAV_LINKS.map(({ label, href, id }) => (
+            <li key={id}>
+              <a href={href} className={active === id ? styles.active : undefined}>
+                {label}
+              </a>
+            </li>
+          ))}
         </ul>
       </nav>
 
