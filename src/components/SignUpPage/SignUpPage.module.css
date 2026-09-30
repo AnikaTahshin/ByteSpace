@@ -1,0 +1,380 @@
+/* ---- full blue page ---- */
+
+.page {
+  min-height: 100vh;
+  background-color: var(--blue);
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-size: 90px 90px;
+  background-position: 0 46px;
+}
+
+.header {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 22px 64px 0;
+}
+
+.brandMark {
+  display: block;
+  width: 34px;
+  height: 40px;
+}
+
+/* ---- two-column layout ---- */
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 440px;
+  align-items: start;
+  gap: 48px;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 40px 64px 72px;
+}
+
+/* ---- left: pitch + collage ---- */
+
+.pitchTitle {
+  font-family: 'Poppins', var(--font-body), sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.pitchText {
+  max-width: 420px;
+  margin-top: 12px;
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.collage {
+  position: relative;
+  max-width: 460px;
+  margin-top: 36px;
+  padding: 40px 0 90px 60px;
+}
+
+.shapeTorus {
+  position: absolute;
+  top: 40px;
+  left: 70px;
+  width: 146px;
+  z-index: 3;
+}
+
+.shapeCone {
+  position: absolute;
+  bottom: -35px;
+  left: 25px;
+  width: 188px;
+  z-index: 3;
+}
+
+/* back card (Build Digital Asset) */
+
+.cardBack {
+  position: relative;
+  z-index: 1;
+  width: 300px;
+  margin-top: 84px;
+  padding: 10px 12px 14px;
+  background: var(--white);
+  border-radius: 14px;
+  box-shadow: 0 18px 44px rgba(3, 10, 60, 0.28);
+}
+
+.cardBackImage {
+  display: block;
+  width: 100%;
+  /* height: 110px; */
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* front card (the Power of Big Data) */
+
+.cardFront {
+  position: absolute;
+  top: 38px;
+  right: 0;
+  z-index: 2;
+  width: 310px;
+  padding: 10px 12px 14px;
+  background: var(--white);
+  border-radius: 14px;
+  box-shadow: 0 18px 44px rgba(3, 10, 60, 0.28);
+}
+
+.cardFrontImage {
+  display: block;
+  width: 100%;
+  /* height: 130px; */
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cardBackBody,
+.cardFrontBody {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+  padding: 5px;
+}
+
+.cardTitle {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #0a0e23;
+}
+
+.cardAuthor {
+  margin-top: 3px;
+  font-size: 11px;
+  color: #9ea1a7;
+}
+
+.cardRating {
+  flex-shrink: 0;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: #4d4e55;
+}
+
+.cardStar {
+  width: 12px;
+  height: 12px;
+  vertical-align: -1px;
+}
+
+.cardMeta {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  margin-top: 10px;
+  padding: 5px
+}
+
+.cardLevel {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #f5f5f6;
+  font-size: 11.5px;
+  font-weight: 500;
+  color: #4d4e55;
+}
+
+.cardAvatars {
+  height: 26px;
+}
+
+.cardPrice {
+  margin-top: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--blue);
+}
+
+.cardPriceNote {
+  font-size: 10.5px;
+  font-weight: 400;
+  color: #9ea1a7;
+}
+
+/* white spring squiggle */
+
+.shapeSpring {
+  position: absolute;
+  right: -60px;
+  /* layered in front of both the front course card and the students card */
+  bottom: 45px;
+  z-index: 5;
+  width: 175px;
+}
+
+/* happy students card */
+
+.studentsCard {
+  position: absolute;
+  right: -30px;
+  bottom: 0;
+  z-index: 4;
+  width: 220px;
+  padding: 12px 16px 14px;
+  background: var(--lime);
+  border-radius: 14px;
+  box-shadow: 0 18px 44px rgba(3, 10, 60, 0.28);
+}
+
+.studentsTitle {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #242528;
+}
+
+.studentsScore {
+  margin-top: 2px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #242528;
+}
+
+.studentsStar {
+  width: 12px;
+  height: 12px;
+  vertical-align: -1px;
+}
+
+.studentsAvatars {
+  display: block;
+  margin-top: 8px;
+  height: 34px;
+}
+
+/* ---- right: form card ---- */
+
+.formCard {
+  padding: 44px 40px 32px;
+  background: var(--white);
+  border-radius: 24px;
+  box-shadow: 0 24px 60px rgba(3, 10, 60, 0.3);
+}
+
+.formKicker {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--blue);
+}
+
+.formTitle {
+  margin-top: 6px;
+  font-family: 'Poppins', var(--font-body), sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 120%;
+  color: #0a0e23;
+}
+
+.form {
+  margin-top: 26px;
+}
+
+.field {
+  margin-top: 16px;
+}
+
+.label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #242528;
+}
+
+.input {
+  width: 100%;
+  margin-top: 8px;
+  padding: 12px 16px;
+  background: var(--white);
+  border: 1px solid #d7d9e0;
+  border-radius: 10px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--ink);
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.input::placeholder {
+  color: #b3b6bd;
+}
+
+.input:focus {
+  border-color: var(--blue);
+}
+
+.submitRow {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 24px;
+}
+
+.submitButton {
+  padding: 11px 32px;
+  background: var(--lime);
+  border: none;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  color: #242528;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.submitButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(10, 14, 35, 0.18);
+}
+
+.loginLine {
+  margin-top: 28px;
+  text-align: center;
+  font-size: 13.5px;
+  color: #4d4e55;
+}
+
+.loginLink {
+  color: var(--blue);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.loginLink:hover {
+  text-decoration: underline;
+}
+
+/* ---- Responsive ---- */
+
+@media (max-width: 1100px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .collage {
+    max-width: 520px;
+  }
+}
+
+@media (max-width: 640px) {
+  .header,
+  .layout {
+    padding-inline: 24px;
+  }
+
+  .formCard {
+    padding: 32px 24px 24px;
+  }
+
+  .cardFront {
+    right: 0;
+  }
+
+  .studentsCard {
+    right: 0;
+  }
+
+  .shapeSpring {
+    right: 0;
+  }
+}
