@@ -13,6 +13,7 @@ import Footer from './components/Footer/Footer'
 import CoursesPage from './components/CoursesPage/CoursesPage'
 import CreatorsPage from './components/CreatorsPage/CreatorsPage'
 import SignUpPage from './components/SignUpPage/SignUpPage'
+import SignInPage from './components/SignInPage/SignInPage'
 import CourseDetailsPage from './components/CourseDetailsPage/CourseDetailsPage'
 import { getCourseBySlug } from './data/courses'
 import styles from './App.module.css'
@@ -46,6 +47,10 @@ function App() {
 
   if (hash.startsWith('#/signup')) {
     return <SignUpPage />
+  }
+
+  if (hash.startsWith('#/signin')) {
+    return <SignInPage />
   }
 
   if (hash.startsWith('#/creators')) {
