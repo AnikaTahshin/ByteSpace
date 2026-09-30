@@ -32,8 +32,8 @@ function Navbar({ active = 'home' }: NavbarProps) {
       </nav>
 
       <div className={styles.actions}>
-        <a href="#" className={styles.signIn}>Sign In</a>
-        <a href="#" className={styles.joinUs}>Join Us</a>
+        <a href="#/signup" className={styles.signIn}>Sign In</a>
+        <a href="#/signup" className={styles.joinUs}>Join Us</a>
         <button type="button" className={styles.cartBtn} aria-label="Cart">
           <img className={styles.cartIcon} src="/assets/images/cart.png" alt="" />
         </button>
