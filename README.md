@@ -1,75 +1,119 @@
-# React + TypeScript + Vite
+<div align="center">
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<img src="public/assets/images/logo.png" width="72" alt="ByteSpace logo"/>
 
-Currently, two official plugins are available:
+# ByteSpace
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**An online course platform — learn, teach, and grow.**
 
-## React Compiler
+[![Live Demo](https://img.shields.io/badge/Live-Demo-003be2?style=for-the-badge&logo=vercel&logoColor=white)](https://byte-space-liard.vercel.app/)
+[![React](https://img.shields.io/badge/React-19-61dafb?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-6-3178c6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-8-a855f7?style=for-the-badge&logo=vite&logoColor=white)](https://vite.dev/)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+</div>
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## About
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+ByteSpace is a modern, fully responsive front-end for an online learning platform.
+Learners can browse a course catalog, filter and search courses, and view detailed
+course pages — while creators get their own profile pages to showcase their work.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Features
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- **Landing page** — animated hero with a working course search bar, skill categories, featured courses, learning paths, creator call-to-action, and testimonials
+- **Course catalog** — live search, category chips, and a responsive 3/2/1-column course grid
+- **Course details** — tabbed content (About / Lessons / Reviews), lesson list, pricing card, and instructor profile
+- **Creator profiles** — creator stats, follow button, and all courses by that creator
+- **Authentication pages** — sign-up and sign-in with client-side validation and social sign-in buttons
+- **Custom 404 page** — any unknown route or path renders a styled not-found page
+- **Fully responsive** — desktop, tablet, and mobile layouts with a hamburger menu on small screens
+- **Hash-based routing** — lightweight client-side routing with zero extra dependencies
 
+## Tech Stack
+
+| Tool | Purpose |
+| --- | --- |
+| [React 19](https://react.dev/) | UI library |
+| [TypeScript](https://www.typescriptlang.org/) | Type safety |
+| [Vite 8](https://vite.dev/) | Dev server & bundler |
+| CSS Modules | Scoped, component-level styling |
+| Vercel | Hosting & deployment |
+
+## Getting Started
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/AnikaTahshin/ByteSpace.git
+cd ByteSpace
+
+# 2. Install dependencies
+npm install
+
+# 3. Start the dev server
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+The app opens at `http://localhost:5173`.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Available Scripts
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the development server with HMR |
+| `npm run build` | Type-check and build for production |
+| `npm run preview` | Preview the production build locally |
+| `npm run lint` | Run ESLint |
+
+## Pages & Routes
+
+Routing is hash-based — every route below also works after a hard refresh,
+and unknown paths fall back to the 404 page (a Vercel rewrite serves the app
+for all paths).
+
+| Route | Page |
+| --- | --- |
+| `/#/` | Landing page |
+| `/#/courses` | Course catalog |
+| `/#/courses/:slug` | Course details |
+| `/#/creators` | Creator profile |
+| `/#/signup` | Sign up |
+| `/#/signin` | Sign in |
+| anything else | 404 — page not found |
+
+## Project Structure
 
 ```
+src/
+├── components/
+│   ├── Navbar/            # Top navigation (with mobile hamburger menu)
+│   ├── Hero/              # Landing hero with floating info cards
+│   ├── SearchBar/         # Course search input
+│   ├── Categories/        # Skill category pills
+│   ├── CourseCard/        # Reusable course card
+│   ├── Courses/           # Featured courses section (landing)
+│   ├── CoursesPage/       # Full course catalog page
+│   ├── CourseDetailsPage/ # Tabbed course details page
+│   ├── CreatorsPage/      # Creator profile page
+│   ├── SignUpPage/        # Sign-up page
+│   ├── SignInPage/        # Sign-in page
+│   ├── NotFoundPage/      # 404 page
+│   ├── Footer/            # Footer with newsletter form
+│   └── ...                # Other landing sections & shared UI
+├── data/
+│   └── courses.ts         # Course catalog data
+├── App.tsx                # Hash router
+└── index.css              # Global styles & design tokens
+```
+
+## Deployment
+
+The project deploys as a static site on [Vercel](https://vercel.com/).
+The included `vercel.json` rewrites all paths to `index.html`, so the SPA
+(and its 404 page) works on every URL.
+
+## License
+
+This project is for learning purposes.
