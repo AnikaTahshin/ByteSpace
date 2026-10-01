@@ -20,7 +20,7 @@ function SignUpPage() {
       </header>
 
       <main className={styles.layout}>
-        {/* left: pitch + course collage */}
+
         <div className={styles.pitch}>
           <h1 className={styles.pitchTitle}>Sign up and come in</h1>
           <p className={styles.pitchText}>
@@ -31,7 +31,6 @@ function SignUpPage() {
 
         </div>
 
-        {/* right: sign-up form card */}
         <div className={styles.formCard}>
           <p className={styles.formKicker}>Create an Account</p>
           <h2 className={styles.formTitle}>

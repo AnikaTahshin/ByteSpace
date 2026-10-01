@@ -43,8 +43,6 @@ function useHashRoute() {
 function App() {
   const { pathname, hash } = useHashRoute()
 
-  // a hash route opened from a path-served url (e.g. /hhhh#/) is valid —
-  // normalize the address bar back to the root so navigation keeps working
   const hashIsRoute =
     hash === '#/' ||
     hash === '#/courses' ||
@@ -60,8 +58,6 @@ function App() {
     }
   }, [pathname, hash, hashIsRoute])
 
-  // this app routes through the hash only — anything typed after the base
-  // url as a real path (e.g. /signin/ or /foo) has no page
   if (pathname !== '/' && pathname !== '/index.html' && !hashIsRoute) {
     return (
       <>

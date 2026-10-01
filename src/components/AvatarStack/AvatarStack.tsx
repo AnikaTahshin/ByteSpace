@@ -9,9 +9,9 @@ const PALETTE = [
 ]
 
 interface AvatarStackProps {
-  /** Initials shown inside each avatar circle. */
+
   labels: string[]
-  /** Text for the trailing lime badge, e.g. "3k+". */
+
   badge?: string
 }
 

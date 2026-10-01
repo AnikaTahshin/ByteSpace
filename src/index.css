@@ -6,8 +6,6 @@
   margin: 0;
   padding: 0;
 }
-
-
 :root {
   --blue: #003be2;
   --lime: #d4fb20;
@@ -16,14 +14,10 @@
   --white: #ffffff;
   --grid-line: rgba(255, 255, 255, 0.05);
   --card-shadow: 0 16px 40px rgba(3, 10, 60, 0.18);
-
   --font-display: 'Clash Display', sans-serif;
   --font-body: 'Satoshi', system-ui, 'Segoe UI', Roboto, sans-serif;
-
   color-scheme: light;
 }
-
-/* Clash Display — headings & logo */
 @font-face {
   font-family: 'Clash Display';
   src: url('/assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Regular.woff2') format('woff2');
@@ -52,8 +46,6 @@
   font-style: normal;
   font-display: swap;
 }
-
-/* Satoshi — body text */
 @font-face {
   font-family: 'Satoshi';
   src: url('/assets/fonts/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Regular.woff2') format('woff2');
@@ -75,7 +67,6 @@
   font-style: normal;
   font-display: swap;
 }
-
 body {
   min-height: 100vh;
   font-family: var(--font-body);

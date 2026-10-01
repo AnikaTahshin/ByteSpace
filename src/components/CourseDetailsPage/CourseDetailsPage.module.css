@@ -1,4 +1,3 @@
-/* ---- blue hero band ---- */
 
 .hero {
   position: relative;
@@ -10,20 +9,17 @@
   background-size: 90px 90px;
   background-position: 0 46px;
 }
-
 .heroContent {
   max-width: 1240px;
   margin: 0 auto;
   padding: 24px 64px 1px;
 }
-
 .titleRow {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 24px;
 }
-
 .title {
   font-family: "Poppins", var(--font-body), sans-serif;
   font-size: 36px;
@@ -33,7 +29,6 @@
   vertical-align: middle;
   color: var(--white);
 }
-
 .shareButton {
   display: inline-flex;
   align-items: center;
@@ -54,38 +49,30 @@
     transform 0.2s ease,
     box-shadow 0.2s ease;
 }
-
 .shareButton:hover {
   transform: translateY(-1px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
-
 .shareIcon {
   width: 15px;
   height: 15px;
 }
-
 .subtitle {
   margin-top: 10px;
   font-size: 14px;
   color: rgba(255, 255, 255, 0.92);
 }
-
 .author {
   margin-top: 10px;
   font-size: 13px;
   color: rgba(255, 255, 255, 0.85);
 }
-
-/* ---- meta chips ---- */
-
 .metaRow {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 18px;
 }
-
 .metaChip {
   display: inline-flex;
   align-items: center;
@@ -97,14 +84,10 @@
   font-weight: 500;
   color: var(--ink);
 }
-
 .metaIcon {
   width: 15px;
   height: 15px;
 }
-
-/* ---- hero grid: video + details card ---- */
-
 .heroGrid {
   display: grid;
   grid-template-columns: 1fr 340px;
@@ -112,14 +95,12 @@
   align-items: start;
   margin-top: 36px;
 }
-
 .videoCard {
   position: relative;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 18px 44px rgba(3, 10, 60, 0.28);
 }
-
 .videoThumb {
   display: block;
   width: 100%;
@@ -127,38 +108,28 @@
   min-height: 340px;
   object-fit: cover;
 }
-
-/* ---- details card ---- */
-
 .detailsCard {
   padding: 24px 22px;
   background: var(--white);
   border-radius: 16px;
   box-shadow: 0 18px 44px rgba(3, 10, 60, 0.28);
   text-align: left;
-  /* lets the details card straddle the blue hero and the white body below;
-     on the card (not the grid) so the grid's box doesn't cover the body's
-     tab buttons and swallow their clicks */
   margin-bottom: -238px;
 }
-
 .lessonsLabel {
   font-size: 15px;
   font-weight: 700;
   color: var(--ink);
 }
-
 .lessonsLabel span {
   font-weight: 400;
   color: var(--muted);
 }
-
 .lessonList {
   margin-top: 14px;
   list-style: none;
   padding: 0;
 }
-
 .lessonItem {
   display: flex;
   align-items: baseline;
@@ -166,12 +137,10 @@
   gap: 12px;
   padding: 9px 0;
 }
-
 .lessonName {
   font-size: 12.5px;
   color: #4f4f4f;
 }
-
 .lessonDuration {
   display: inline-flex;
   align-items: center;
@@ -180,41 +149,34 @@
   font-size: 11.5px;
   color: var(--blue);
 }
-
 .lessonDurationIcon {
   width: 13px;
   height: 13px;
 }
-
 .moreLessons {
   font-size: 11.5px;
   color: var(--muted);
 }
-
 .enrollNote {
   margin-top: 16px;
   font-size: 12.5px;
   line-height: 1.6;
   color: #4f4f4f;
 }
-
 .priceRow {
   margin-top: 12px;
 }
-
 .price {
   font-family: "Poppins", var(--font-body), sans-serif;
   font-size: 30px;
   font-weight: 700;
   color: var(--blue);
 }
-
 .priceNote {
   margin-left: 4px;
   font-size: 12px;
   color: var(--muted);
 }
-
 .enrollButton {
   width: 100%;
   margin-top: 14px;
@@ -231,30 +193,25 @@
     transform 0.2s ease,
     box-shadow 0.2s ease;
 }
-
 .enrollButton:hover {
   transform: translateY(-1px);
   box-shadow: 0 8px 20px rgba(10, 14, 35, 0.18);
 }
-
 .divider {
   margin: 20px 0;
   border: none;
   border-top: 1px solid #ececf0;
 }
-
 .includeTitle {
   font-size: 14px;
   font-weight: 700;
   color: var(--ink);
 }
-
 .includeList {
   margin-top: 12px;
   list-style: none;
   padding: 0;
 }
-
 .includeItem {
   display: flex;
   align-items: center;
@@ -263,44 +220,37 @@
   font-size: 13px;
   color: #4f4f4f;
 }
-
 .includeIcon {
   width: 18px;
   height: 18px;
 }
-
 .instructor {
   display: flex;
   align-items: center;
   gap: 12px;
 }
-
 .instructorAvatar {
   width: 44px;
   height: 44px;
   border-radius: 50%;
   object-fit: cover;
 }
-
 .instructorName {
   font-size: 14px;
   font-weight: 700;
   color: var(--ink);
 }
-
 .instructorRole {
   margin-top: 2px;
   font-size: 12px;
   color: var(--muted);
 }
-
 .instructorNote {
   margin-top: 14px;
   font-size: 12px;
   line-height: 1.6;
   color: var(--muted);
 }
-
 .profileButton {
   width: 40%;
   margin-top: 14px;
@@ -315,29 +265,21 @@
   cursor: pointer;
   transition: border-color 0.2s ease;
 }
-
 .profileButton:hover {
   border-color: var(--ink);
 }
-
-/* ---- white body ---- */
-
 .body {
   padding: clamp(32px, 4vw, 48px) 64px 80px;
   max-width: 1240px;
   margin: 0 auto;
 }
-
-/* keeps the text in the left column, clear of the overlapping details card */
 .bodyContent {
   max-width: calc(100% - 380px);
 }
-
 .tabs {
   display: flex;
   gap: 12px;
 }
-
 .tab {
   padding: 9px 22px;
   background: var(--white);
@@ -352,16 +294,13 @@
     background 0.2s ease,
     border-color 0.2s ease;
 }
-
 .tab:hover {
   border-color: var(--ink);
 }
-
 .tabActive {
   background: var(--lime);
   border-color: var(--lime);
 }
-
 .sectionTitle {
   margin-top: 36px;
   font-family: "Poppins", var(--font-body), sans-serif;
@@ -369,22 +308,17 @@
   font-weight: 600;
   color: var(--ink);
 }
-
 .subTitle {
   margin-top: 28px;
   font-size: 15px;
   font-weight: 700;
   color: var(--ink);
 }
-
-/* ---- Lessons tab: module list ---- */
-
 .moduleList {
   margin-top: 16px;
   list-style: none;
   padding: 0;
 }
-
 .moduleItem {
   display: flex;
   align-items: flex-start;
@@ -394,11 +328,9 @@
   border: 1px solid #ececf0;
   border-radius: 12px;
 }
-
 .moduleItem + .moduleItem {
   margin-top: 12px;
 }
-
 .moduleIcon {
   display: grid;
   place-items: center;
@@ -408,40 +340,32 @@
   background: var(--lime);
   border-radius: 10px;
 }
-
 .moduleIconImg {
   width: 22px;
   height: 22px;
   filter: brightness(0);
 }
-
 .moduleName {
   font-size: 14px;
   font-weight: 700;
   color: var(--ink);
 }
-
 .moduleDesc {
   margin-top: 4px;
   font-size: 13px;
   line-height: 1.65;
   color: var(--muted);
 }
-
-/* ---- Lessons tab: progress card ---- */
-
 .progressCard {
   margin-top: 20px;
   padding: 18px 22px;
   border: 1px solid #ececf0;
   border-radius: 12px;
 }
-
 .progressCardLabel {
   font-size: 13px;
   color: var(--muted);
 }
-
 .progressCardValue {
   margin-top: 4px;
   font-family: "Poppins", var(--font-body), sans-serif;
@@ -449,7 +373,6 @@
   font-weight: 700;
   color: var(--ink);
 }
-
 .progressCardTrack {
   height: 8px;
   margin-top: 12px;
@@ -457,14 +380,12 @@
   border-radius: 999px;
   overflow: hidden;
 }
-
 .progressCardFill {
   width: 90%;
   height: 100%;
   background: var(--lime);
   border-radius: 999px;
 }
-
 .paragraph {
   margin-top: 14px;
   font-family: var(--font-body);
@@ -474,14 +395,12 @@
   letter-spacing: 0;
   color: #4f4f4f;
 }
-
 .highlightRow {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 18px;
   margin-top: 16px;
 }
-
 .highlightImage {
   width: 100%;
   height: 120px;
@@ -489,13 +408,11 @@
   border-radius: 10px;
   border: 1px solid #ececf0;
 }
-
 .keyPoints {
   margin-top: 16px;
   list-style: none;
   padding: 0;
 }
-
 .keyPoint {
   display: flex;
   align-items: center;
@@ -505,21 +422,16 @@
   font-weight: 500;
   color: var(--ink);
 }
-
 .keyPointIcon {
   width: 18px;
   height: 18px;
   flex-shrink: 0;
 }
-
 .tabPlaceholder {
   margin-top: 28px;
   font-size: 14px;
   color: var(--muted);
 }
-
-/* ---- Reviews tab ---- */
-
 .ratingCard {
   display: flex;
   align-items: center;
@@ -530,7 +442,6 @@
   border: 1px solid #ececf0;
   border-radius: 12px;
 }
-
 .ratingScore {
   display: grid;
   place-items: center;
@@ -540,12 +451,10 @@
   border-radius: 12px;
   text-align: center;
 }
-
 .ratingScoreLabel {
   font-size: 12px;
   color: #242528;
 }
-
 .ratingScoreValue {
   font-family: 'Poppins', var(--font-body), sans-serif;
   font-size: 28px;
@@ -553,20 +462,17 @@
   line-height: 1.1;
   color: #242528;
 }
-
 .ratingRows {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 9px;
 }
-
 .ratingRow {
   display: flex;
   align-items: center;
   gap: 12px;
 }
-
 .ratingBar {
   flex: 1;
   height: 6px;
@@ -574,24 +480,20 @@
   border-radius: 999px;
   overflow: hidden;
 }
-
 .ratingBarFill {
   height: 100%;
   background: var(--lime);
   border-radius: 999px;
 }
-
 .ratingStars {
   font-size: 13px;
   color: #242528;
   letter-spacing: 2px;
   flex-shrink: 0;
 }
-
 .starsDim {
   color: #d7d9e0;
 }
-
 .ratingCount {
   min-width: 30px;
   text-align: right;
@@ -599,14 +501,12 @@
   color: var(--muted);
   flex-shrink: 0;
 }
-
 .reviewChips {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 16px;
 }
-
 .chip {
   padding: 8px 18px;
   background: var(--white);
@@ -619,152 +519,120 @@
   cursor: pointer;
   transition: background 0.2s ease, border-color 0.2s ease;
 }
-
 .chip:hover {
   border-color: var(--ink);
 }
-
 .chipActive {
   background: var(--lime);
   border-color: var(--lime);
 }
-
 .reviewList {
   display: flex;
   flex-direction: column;
   gap: 18px;
   margin-top: 24px;
 }
-
 .reviewCard {
   padding: 18px 20px;
   background: var(--white);
   border: 1px solid #ececf0;
   border-radius: 12px;
 }
-
 .reviewHead {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
 }
-
 .reviewPerson {
   display: flex;
   align-items: center;
   gap: 12px;
 }
-
 .reviewAvatar {
   width: 42px;
   height: 42px;
   border-radius: 50%;
   object-fit: cover;
 }
-
 .reviewName {
   font-size: 14px;
   font-weight: 700;
   color: #242528;
 }
-
 .reviewRole {
   margin-top: 2px;
   font-size: 12px;
   color: var(--muted);
 }
-
 .reviewAgo {
   font-size: 12px;
   color: var(--muted);
 }
-
 .stars {
   color: #242528;
   font-size: 13px;
   letter-spacing: 3px;
 }
-
 .starsDim {
   color: #d7d9e0;
 }
-
 .reviewStarsRow {
   margin-top: 10px;
 }
-
 .reviewText {
   margin-top: 8px;
   font-size: 13px;
   line-height: 1.7;
   color: #4f4f4f;
 }
-
-/* ---- Responsive ---- */
-
 @media (max-width: 1100px) {
   .heroGrid {
     grid-template-columns: 1fr;
   }
-
-  /* single column: no straddle, or the card would cover the tab buttons */
   .detailsCard {
     margin-bottom: 0;
   }
-
-  /* let the card float inside the blue with even spacing on all sides */
   .heroContent {
     padding-bottom: 24px;
   }
-
   .bodyContent {
     max-width: 100%;
   }
-
   .body {
     padding-top: clamp(32px, 4vw, 48px);
   }
 }
-
 @media (max-width: 900px) {
   .heroContent {
     padding-inline: 24px;
   }
-
   .body {
     padding-inline: 24px;
   }
-
   .highlightRow {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
 @media (max-width: 640px) {
   .titleRow {
     flex-wrap: wrap;
   }
-
   .title {
     font-size: 28px;
   }
-
   .ratingCard {
     flex-direction: column;
     align-items: stretch;
   }
 }
-
 @media (max-width: 420px) {
   .title {
     font-size: 23px;
   }
-
   .videoThumb {
     min-height: 240px;
   }
-
   .highlightImage {
     height: 90px;
   }

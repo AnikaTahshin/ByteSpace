@@ -7,10 +7,6 @@ interface InfoCardProps {
   children: ReactNode
 }
 
-/**
- * Reusable white floating card used across the hero.
- * Positioning is owned by the parent via `className`.
- */
 function InfoCard({ title, className, children }: InfoCardProps) {
   return (
     <div className={[styles.card, className].filter(Boolean).join(' ')}>

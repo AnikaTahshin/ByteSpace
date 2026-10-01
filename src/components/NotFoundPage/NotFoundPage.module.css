@@ -1,4 +1,3 @@
-/* ---- full blue page ---- */
 
 .page {
   min-height: 100vh;
@@ -9,9 +8,6 @@
   background-size: 90px 90px;
   background-position: 0 46px;
 }
-
-/* ---- hero content ---- */
-
 .hero {
   display: flex;
   flex-direction: column;
@@ -21,9 +17,6 @@
   padding: 0 24px 48px;
   text-align: center;
 }
-
-/* giant lime 404 */
-
 .code {
   font-family: 'Poppins', var(--font-body), sans-serif;
   font-size: clamp(110px, 26vw, 380px);
@@ -36,7 +29,6 @@
   color: transparent;
   user-select: none;
 }
-
 .heading {
   position: relative;
   z-index: 1;
@@ -48,13 +40,11 @@
   line-height: 120%;
   color: var(--white);
 }
-
 .hint {
   margin-top: 26px;
   font-size: 14px;
   color: rgba(255, 255, 255, 0.85);
 }
-
 .homeButton {
   display: inline-block;
   margin-top: 26px;
@@ -70,22 +60,18 @@
     transform 0.2s ease,
     box-shadow 0.2s ease;
 }
-
 .homeButton:hover {
   transform: translateY(-1px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
-
 @media (max-width: 420px) {
   .heading {
     margin-top: 16px;
     font-size: 25px;
   }
-
   .heading br {
     display: none;
   }
-
   .hint {
     margin-top: 18px;
     font-size: 13px;

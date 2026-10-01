@@ -1,4 +1,3 @@
-/* ---- "or" divider ---- */
 
 .orRow {
   display: flex;
@@ -6,27 +5,21 @@
   gap: 16px;
   margin-top: 28px;
 }
-
 .orLine {
   flex: 1;
   height: 1px;
   background: #e4e5ea;
 }
-
 .orText {
   font-size: 13px;
   color: #9ea1a7;
 }
-
-/* ---- social sign-in buttons ---- */
-
 .socialRow {
   display: flex;
   justify-content: center;
   gap: 20px;
   margin-top: 24px;
 }
-
 .socialButton {
   display: grid;
   place-items: center;
@@ -38,12 +31,10 @@
   cursor: pointer;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
-
 .socialButton:hover {
   border-color: #b3b6bd;
   box-shadow: 0 6px 16px rgba(10, 14, 35, 0.08);
 }
-
 .socialIcon {
   width: 24px;
   height: 24px;

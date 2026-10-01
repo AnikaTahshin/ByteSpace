@@ -14,19 +14,16 @@
       rgba(203, 252, 1, 0) 100%
     );
 }
-
 .inner {
   max-width: 1240px;
   margin: 0 auto;
 }
-
 .header {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: start;
   gap: clamp(40px, 6vw, 96px);
 }
-
 .heading {
   font-family: 'Poppins', var(--font-body), sans-serif;
   font-size: 44px;
@@ -35,7 +32,6 @@
   letter-spacing: -0.01em;
   color: #0a0e23;
 }
-
 .intro {
   max-width: 480px;
   justify-self: end;
@@ -46,21 +42,16 @@
   letter-spacing: 0;
   color: #9ea1a7;
 }
-
 .brand {
   font-weight: 700;
   color: var(--ink);
 }
-
-/* ---- cards ---- */
-
 .grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
   margin-top: 56px;
 }
-
 .card {
   padding: 20px 15px 32px;
   background: var(--white);
@@ -69,33 +60,28 @@
   box-shadow: 0 8px 28px rgba(10, 14, 35, 0.05);
   transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
-
 .card:hover {
   transform: translateY(-3px);
   box-shadow: 0 14px 34px rgba(10, 14, 35, 0.09);
 }
-
 .avatar {
   width: 64px;
   height: 64px;
   border-radius: 50%;
   object-fit: cover;
 }
-
 .name {
   margin-top: 18px;
   font-size: 15px;
   font-weight: 700;
   color: var(--ink);
 }
-
 .role {
   margin-top: 2px;
   font-size: 13px;
   font-weight: 500;
   color: var(--blue);
 }
-
 .quote {
   margin-top: 16px;
   font-family: var(--font-body);
@@ -105,22 +91,16 @@
   letter-spacing: 0;
   color: #4f4f4f;
 }
-
-/* ---- Responsive ---- */
-
 @media (max-width: 900px) {
   .testimonials {
     padding-inline: 24px;
   }
-
   .header {
     grid-template-columns: 1fr;
   }
-
   .intro {
     justify-self: start;
   }
-
   .grid {
     grid-template-columns: 1fr;
   }

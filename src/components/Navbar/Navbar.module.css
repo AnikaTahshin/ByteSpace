@@ -6,7 +6,6 @@
   justify-content: space-between;
   padding: 35px clamp(24px, 8.5vw, 122px) 31px;
 }
-
 .brand {
   display: inline-flex;
   align-items: baseline;
@@ -18,12 +17,10 @@
   color: var(--white);
   text-decoration: none;
 }
-
 .brandMark {
   width: 28.875px;
   height: 31.5px;
 }
-
 .links {
   position: absolute;
   left: 50%;
@@ -33,7 +30,6 @@
   gap: 34px;
   list-style: none;
 }
-
 .links a {
   color: rgba(255, 255, 255, 0.85);
   text-decoration: none;
@@ -42,24 +38,20 @@
   font-weight: 400;
   transition: color 0.2s ease;
 }
-
 .links a:hover {
   color: var(--white);
 }
-
 .links a.active {
   color: var(--white);
   font-family: "Satoshi", sans-serif;
   font-size: 16px;
   font-weight: 500;
 }
-
 .actions {
   display: flex;
   align-items: center;
   gap: 24px;
 }
-
 .signIn,
 .joinUs {
   color: var(--white);
@@ -68,12 +60,10 @@
   font-weight: 400;
   font-family: "Satoshi", sans-serif;
 }
-
 .signIn:hover,
 .joinUs:hover {
   opacity: 0.85;
 }
-
 .cartBtn {
   display: grid;
   place-items: center;
@@ -83,15 +73,11 @@
   border: none;
   cursor: pointer;
 }
-
 .cartIcon {
   display: block;
   width: 22px;
   height: auto;
 }
-
-/* ---- hamburger (mobile only) ---- */
-
 .menuBtn {
   display: none;
   flex-direction: column;
@@ -102,7 +88,6 @@
   border: none;
   cursor: pointer;
 }
-
 .menuBtn span {
   display: block;
   width: 22px;
@@ -110,30 +95,24 @@
   background: var(--white);
   border-radius: 2px;
 }
-
 .menuAuth {
   display: none;
 }
-
 @media (max-width: 1240px) {
   .links {
     gap: 22px;
   }
 }
-
 @media (max-width: 900px) {
   .navbar {
     padding: 20px 24px;
   }
-
   .menuBtn {
     display: flex;
   }
-
   .links {
     display: none;
   }
-
   .linksOpen {
     display: flex;
     flex-direction: column;
@@ -149,44 +128,36 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     box-shadow: 0 18px 30px rgba(3, 10, 60, 0.3);
   }
-
   .linksOpen li {
     width: 100%;
     text-align: center;
   }
-
   .linksOpen a {
     display: block;
     padding: 10px 0;
   }
 }
-
 @media (max-width: 360px) {
   .navbar {
     padding-inline: 16px;
   }
-
   .brand {
     font-size: 22px;
   }
-
   .actions {
     gap: 12px;
   }
 }
-
 @media (max-width: 640px) {
   .signIn,
   .joinUs {
     display: none;
   }
-
   .menuAuth {
     display: block;
     border-top: 1px solid rgba(255, 255, 255, 0.15);
     width: 100%;
   }
-
   .menuAuth:first-of-type {
     margin-top: 8px;
   }

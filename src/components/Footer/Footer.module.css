@@ -2,19 +2,16 @@
   padding: clamp(48px, 6vw, 80px) 64px 32px;
   background: var(--white);
 }
-
 .inner {
   max-width: 1240px;
   margin: 0 auto;
 }
-
 .top {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
   align-items: start;
   gap: clamp(48px, 6vw, 120px);
 }
-
 .brand {
   display: inline-flex;
   align-items: flex-end;
@@ -27,13 +24,11 @@
   color: #242528;
   text-decoration: none;
 }
-
 .brandMark {
   width: 26px;
   height: 26px;
   margin-bottom: 1px;
 }
-
 .newsletterText {
   max-width: 360px;
   margin-top: 20px;
@@ -44,13 +39,11 @@
   letter-spacing: 0;
   color: #0a0e23;
 }
-
 .form {
   display: flex;
   gap: 14px;
   margin-top: 22px;
 }
-
 .input {
   flex: 1;
   min-width: 0;
@@ -63,15 +56,12 @@
   color: var(--ink);
   outline: none;
 }
-
 .input::placeholder {
   color: var(--muted);
 }
-
 .input:focus {
   border-color: var(--blue);
 }
-
 .button {
   padding: 12px 28px;
   background: var(--lime);
@@ -84,12 +74,10 @@
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-
 .button:hover {
   transform: translateY(-1px);
   box-shadow: 0 8px 20px rgba(10, 14, 35, 0.15);
 }
-
 .legal {
   max-width: 340px;
   margin-top: 22px;
@@ -100,7 +88,6 @@
   letter-spacing: 0;
   color: #242528
 }
-
 .links {
   display: grid;
   grid-template-columns: repeat(3, auto);
@@ -108,16 +95,13 @@
   justify-content: space-between;
   padding-top: 8px;
 }
-
 .linkColumn {
   list-style: none;
   padding: 0;
 }
-
 .linkColumn li + li {
   margin-top: 18px;
 }
-
 .link {
   font-family: 'Satoshi', var(--font-body), sans-serif;
   font-size: 14px;
@@ -127,11 +111,9 @@
   color: #242528;
   text-decoration: none;
 }
-
 .link:hover {
   color: var(--blue);
 }
-
 .bottom {
   display: flex;
   align-items: center;
@@ -141,7 +123,6 @@
   padding-top: 24px;
   border-top: 1px solid #ececf0;
 }
-
 .copyright {
   font-family: 'Satoshi', var(--font-body), sans-serif;
   font-size: 12px;
@@ -150,43 +131,35 @@
   letter-spacing: 0;
   color: #242528;
 }
-
 .bottomLinks {
   display: flex;
   gap: 32px;
 }
-
 .bottomLinks .link {
   font-size: 12px;
   color: #242528;
   font-family: 'Satoshi', var(--font-body), sans-serif;
 }
-
 @media (max-width: 900px) {
   .footer {
     padding-inline: 24px;
   }
-
   .top {
     grid-template-columns: 1fr;
   }
-
   .links {
     justify-content: start;
     grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
     gap: 24px;
   }
-
   .form {
     flex-wrap: wrap;
   }
-
   .bottom {
     flex-direction: column;
     align-items: flex-start;
   }
 }
-
 @media (max-width: 360px) {
   .footer {
     padding-inline: 16px;

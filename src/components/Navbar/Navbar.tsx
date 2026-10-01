@@ -8,7 +8,7 @@ const NAV_LINKS = [
 ]
 
 interface NavbarProps {
-  /** id of the currently active link */
+
   active?: string
 }
 

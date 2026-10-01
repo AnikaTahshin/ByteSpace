@@ -6,13 +6,11 @@
   box-shadow: var(--card-shadow);
   text-align: left;
 }
-
 .title {
   font-size: 14px;
   font-weight: 700;
   color: var(--ink);
 }
-
 .subtitle {
   margin-top: 4px;
   font-size: 12px;

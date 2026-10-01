@@ -7,7 +7,6 @@
   padding-top: clamp(16px, 6vh, 64px);
   text-align: center;
 }
-
 .heading {
   font-family: 'Poppins', var(--font-body), sans-serif;
   font-size: clamp(38px, 5vw, 72px);
@@ -15,7 +14,6 @@
   line-height: 1.15;
   color: var(--white);
 }
-
 .subtitle {
   margin-top: 18px;
   font-size: clamp(15px, 1.25vw, 18px);
@@ -24,16 +22,12 @@
   text-align: center;
   color: rgba(255, 255, 255, 0.85);
 }
-
-/* ---- Stage: arch, person, floating cards ---- */
-
 .stage {
   position: relative;
   width: min(100%, 1560px);
   height: clamp(400px, 49vh, 560px);
   margin-top: auto;
 }
-
 .arch {
   position: absolute;
   bottom: 0;
@@ -41,7 +35,6 @@
   transform: translateX(-50%);
   width: min(64%, 930px);
 }
-
 .person {
   position: absolute;
   bottom: -14%;
@@ -50,27 +43,21 @@
   height: min(120%, 620px);
   width: auto;
 }
-
-/* ---- Floating cards (positions from the Figma layout) ---- */
-
 .cardDesign {
   position: absolute;
   left: 28%;
   top: 24%;
 }
-
 .cardProgress {
   position: absolute;
   left: 59%;
   top: 25%;
 }
-
 .cardStudents {
   position: absolute;
   left: 22.5%;
   top: 63%;
 }
-
 .nameTag {
   position: absolute;
   left: 26%;
@@ -82,22 +69,17 @@
   padding: 10px 22px;
   border-radius: 10px;
 }
-
-/* ---- Card inner content ---- */
-
 .cardNote {
   margin-top: 4px;
   font-size: 12px;
   color: var(--muted);
 }
-
 .progressValue {
   font-size: 34px;
   font-weight: 700;
   color: var(--ink);
   text-align: left;
 }
-
 .progressTrack {
   width: 150px;
   height: 9px;
@@ -106,14 +88,12 @@
   border-radius: 999px;
   overflow: hidden;
 }
-
 .progressFill {
   width: 55%;
   height: 100%;
   background: var(--lime);
   border-radius: 999px;
 }
-
 .rating {
   display: flex;
   align-items: baseline;
@@ -122,114 +102,89 @@
   font-size: 12px;
   color: var(--muted);
 }
-
 .rating strong {
   font-size: 15px;
   color: var(--ink);
 }
-
 .starGreen {
   width: 14px;
   height: 14px;
   align-self: center;
 }
-
 .peopleStack {
   width: 162px;
   height: 30px;
   margin-top: 10px;
 }
-
-/* ---- Responsive ---- */
-
 @media (max-width: 820px) {
   .headingBreak {
     display: none;
   }
-
-  /* keep the desktop-like composition: person centered, cards floating */
   .stage {
     height: clamp(340px, 108vw, 470px);
     margin-top: 8px;
     padding: 0;
   }
-
   .arch {
     display: none;
   }
-
   .person {
     bottom: 0;
     transform: translateX(-50%);
     height: 100%;
   }
-
   .cardDesign {
     left: 2%;
     top: 4%;
   }
-
   .cardProgress {
     left: auto;
     right: 2%;
     top: 16%;
   }
-
   .cardStudents {
     left: 3%;
     top: auto;
     bottom: 4%;
   }
-
   .peopleStack {
     width: 130px;
   }
-
   .cardProgress .progressTrack {
     width: 120px;
   }
 }
-
 @media (max-width: 480px) {
   .cardDesign {
     left: 0;
   }
-
   .cardProgress {
     right: 0;
   }
-
   .cardStudents {
     left: 0;
   }
-
   .peopleStack {
     width: 110px;
   }
 }
-
 @media (max-width: 420px) {
   .heading {
     font-size: 30px;
   }
-
   .subtitle {
     margin-top: 12px;
     font-size: 14px;
   }
-
   .stage {
     height: clamp(270px, 95vw, 350px);
   }
-
   .progressValue {
     font-size: 26px;
   }
-
   .progressTrack {
     width: 100px !important;
   }
-
   .peopleStack {
     width: 96px;
   }

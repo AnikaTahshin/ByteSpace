@@ -29,7 +29,7 @@ function Growth() {
   return (
     <section className={styles.section}>
       <div className={styles.inner}>
-        {/* ---- Row 1: copy + learner visual ---- */}
+
         <div className={styles.row}>
           <div className={styles.copy}>
             <h2 className={styles.heading}>
@@ -70,15 +70,7 @@ function Growth() {
                 src="/assets/images/course_card_back.png"
                 alt=""
               />
-              {/* <p className={styles.courseTitle}>Learn Figma from Scratch</p>
-              <p className={styles.courseNote}>to jumpstart Skills</p>
-              <div className={styles.courseTrack}>
-                <div className={styles.courseFill} />
-              </div>
-              <div className={styles.courseMeta}>
-                <span className={styles.courseLevel}>Beginner</span>
-                <span className={styles.coursePrice}>$25</span>
-              </div> */}
+
             </InfoCard>
 
             <img
@@ -89,7 +81,6 @@ function Growth() {
           </div>
         </div>
 
-        {/* ---- Row 2: creator visual + copy ---- */}
         <div className={styles.row}>
           <div className={styles.stageCreator}>
             <img
@@ -112,7 +103,7 @@ function Growth() {
             </div>
 
             <div className={styles.cardEarning}>
-             
+
               <div>
                 <p className={styles.cardBlueLabel}>Year to Date</p>
                 <p className={styles.cardBlueLabelSmall}>Earning</p>
