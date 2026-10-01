@@ -713,6 +713,11 @@
     margin-bottom: 0;
   }
 
+  /* let the card float inside the blue with even spacing on all sides */
+  .heroContent {
+    padding-bottom: 24px;
+  }
+
   .bodyContent {
     max-width: 100%;
   }
