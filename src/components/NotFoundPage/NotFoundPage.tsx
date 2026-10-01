@@ -18,7 +18,7 @@ function NotFoundPage() {
         <p className={styles.hint}>
           Try to use a correct url or go back to homepage to start again
         </p>
-        <a className={styles.homeButton} href="#/">
+        <a className={styles.homeButton} href="/">
           Back to Home
         </a>
       </main>

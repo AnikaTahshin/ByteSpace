@@ -41,7 +41,7 @@
   position: relative;
   z-index: 1;
   max-width: 720px;
-  margin-top: clamp(-70px, -5vw, -34px);
+  margin-top: clamp(-56px, -4vw, -26px);
   font-family: 'Poppins', var(--font-body), sans-serif;
   font-size: clamp(30px, 4vw, 52px);
   font-weight: 600;
@@ -50,7 +50,7 @@
 }
 
 .hint {
-  margin-top: 22px;
+  margin-top: 26px;
   font-size: 14px;
   color: rgba(255, 255, 255, 0.85);
 }
@@ -78,6 +78,7 @@
 
 @media (max-width: 420px) {
   .heading {
+    margin-top: 6px;
     font-size: 26px;
   }
 
