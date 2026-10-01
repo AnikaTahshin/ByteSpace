@@ -58,6 +58,26 @@
   padding: 40px 0 90px 60px;
 }
 
+@media (min-width: 1101px) {
+  .layout {
+    grid-template-areas:
+      'pitch form'
+      'collage form';
+  }
+
+  .pitch {
+    grid-area: pitch;
+  }
+
+  .formCard {
+    grid-area: form;
+  }
+
+  .collage {
+    grid-area: collage;
+  }
+}
+
 .shapeTorus {
   position: absolute;
   top: 40px;
@@ -366,39 +386,52 @@
     padding: 32px 24px 24px;
   }
 
+  /* the collage becomes a proportional canvas so the layered
+     composition survives at any width */
   .collage {
-    padding: 32px 0 90px;
+    padding: 0;
+    max-width: 420px;
+    margin-inline: auto;
+    aspect-ratio: 340 / 430;
   }
 
   .cardBack {
-    width: 100%;
-    margin-top: 60px;
+    width: 74%;
+    margin-top: 18%;
   }
 
   .cardFront {
-    width: min(310px, 96%);
+    width: 78%;
     top: 0;
     right: 0;
   }
 
   .shapeTorus {
-    left: 40px;
+    top: 0;
+    left: 8%;
+    width: 26%;
   }
 
   .shapeCone {
-    left: -12px;
-  }
-
-  .cardFront {
-    right: 0;
-  }
-
-  .studentsCard {
-    right: 0;
+    bottom: 8%;
+    left: 0;
+    width: 26%;
   }
 
   .shapeSpring {
     right: 0;
+    bottom: 17%;
+    width: 26%;
+  }
+
+  .studentsCard {
+    width: 62%;
+    right: 0;
+    bottom: 0;
+  }
+
+  .studentsAvatars {
+    height: 28px;
   }
 }
 

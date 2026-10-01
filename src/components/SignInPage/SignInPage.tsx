@@ -28,85 +28,8 @@ function SignInPage() {
             instant access to a world of knowledge.
           </p>
 
-          <div className={page.collage} aria-hidden="true">
-            <img className={page.shapeTorus} src="/assets/images/lime_circle_full.png" alt="" />
-            <img className={page.shapeCone} src="/assets/images/lime_cone.png" alt="" />
-
-            <div className={page.cardBack}>
-              <img className={page.cardBackImage} src="/assets/images/courses/course_2.png" alt="" />
-              <div className={page.cardBackBody}>
-                <div>
-                  <p className={page.cardTitle}>Build Digital Asset</p>
-                  <p className={page.cardAuthor}>by popupart studio</p>
-                </div>
-                <span className={page.cardRating}>
-                  4.8 <img className={page.cardStar} src="/assets/images/star_gray.png" alt="" />
-                </span>
-              </div>
-              <div className={page.cardMeta}>
-                <span className={page.cardLevel}>
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" aria-hidden="true">
-                    <path d="M5 20v-6" /><path d="M12 20V9" /><path d="M19 20V4" />
-                  </svg>
-                  Beginner
-                </span>
-                <img
-                  className={page.cardAvatars}
-                  src="/assets/images/people_2.png"
-                  alt=""
-                />
-              </div>
-              <p className={page.cardPrice}>
-                $25 <span className={page.cardPriceNote}>/Lifetime</span>
-              </p>
-            </div>
-
-            <div className={page.cardFront}>
-              <img className={page.cardFrontImage} src="/assets/images/courses/course_3.png" alt="" />
-              <div className={page.cardFrontBody}>
-                <div>
-                  <p className={page.cardTitle}>the Power of Big Data</p>
-                  <p className={page.cardAuthor}>by popupart studio</p>
-                </div>
-                <span className={page.cardRating}>
-                  4.5 <img className={page.cardStar} src="/assets/images/lime_star.png" alt="" />
-                </span>
-              </div>
-              <div className={page.cardMeta}>
-                <span className={page.cardLevel}>
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" aria-hidden="true">
-                    <path d="M5 20v-6" /><path d="M12 20V9" /><path d="M19 20V4" />
-                  </svg>
-                  Intermediate
-                </span>
-                <img
-                  className={page.cardAvatars}
-                  src="/assets/images/people_2.png"
-                  alt=""
-                />
-              </div>
-              <p className={page.cardPrice}>
-                $25 <span className={page.cardPriceNote}>/Lifetime</span>
-              </p>
-            </div>
-
-            <img className={page.shapeSpring} src="/assets/images/white-curve.png" alt="" />
-
-            <div className={page.studentsCard}>
-              <p className={page.studentsTitle}>Happy Students</p>
-              <p className={page.studentsScore}>
-                4.8 (290+) <img className={page.studentsStar} src="/assets/images/star_green.png" alt="" />
-              </p>
-              <img
-                className={page.studentsAvatars}
-                src="/assets/images/people_2.png"
-                alt=""
-              />
-            </div>
-          </div>
         </div>
 
-        {/* right: sign-in form card */}
         <div className={page.formCard}>
           <p className={page.formKicker}>Sign In</p>
           <h2 className={page.formTitle}>Welcome Back</h2>
@@ -170,6 +93,82 @@ function SignInPage() {
               Create an account
             </a>
           </p>
+        </div>
+        <div className={page.collage} aria-hidden="true">
+          <img className={page.shapeTorus} src="/assets/images/lime_circle_full.png" alt="" />
+          <img className={page.shapeCone} src="/assets/images/lime_cone.png" alt="" />
+
+          <div className={page.cardBack}>
+            <img className={page.cardBackImage} src="/assets/images/courses/course_2.png" alt="" />
+            <div className={page.cardBackBody}>
+              <div>
+                <p className={page.cardTitle}>Build Digital Asset</p>
+                <p className={page.cardAuthor}>by popupart studio</p>
+              </div>
+              <span className={page.cardRating}>
+                4.8 <img className={page.cardStar} src="/assets/images/star_gray.png" alt="" />
+              </span>
+            </div>
+            <div className={page.cardMeta}>
+              <span className={page.cardLevel}>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" aria-hidden="true">
+                  <path d="M5 20v-6" /><path d="M12 20V9" /><path d="M19 20V4" />
+                </svg>
+                Beginner
+              </span>
+              <img
+                className={page.cardAvatars}
+                src="/assets/images/people_2.png"
+                alt=""
+              />
+            </div>
+            <p className={page.cardPrice}>
+              $25 <span className={page.cardPriceNote}>/Lifetime</span>
+            </p>
+          </div>
+
+          <div className={page.cardFront}>
+            <img className={page.cardFrontImage} src="/assets/images/courses/course_3.png" alt="" />
+            <div className={page.cardFrontBody}>
+              <div>
+                <p className={page.cardTitle}>the Power of Big Data</p>
+                <p className={page.cardAuthor}>by popupart studio</p>
+              </div>
+              <span className={page.cardRating}>
+                4.5 <img className={page.cardStar} src="/assets/images/lime_star.png" alt="" />
+              </span>
+            </div>
+            <div className={page.cardMeta}>
+              <span className={page.cardLevel}>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" aria-hidden="true">
+                  <path d="M5 20v-6" /><path d="M12 20V9" /><path d="M19 20V4" />
+                </svg>
+                Intermediate
+              </span>
+              <img
+                className={page.cardAvatars}
+                src="/assets/images/people_2.png"
+                alt=""
+              />
+            </div>
+            <p className={page.cardPrice}>
+              $25 <span className={page.cardPriceNote}>/Lifetime</span>
+            </p>
+          </div>
+
+          <img className={page.shapeSpring} src="/assets/images/white-curve.png" alt="" />
+
+          <div className={page.studentsCard}>
+            <p className={page.studentsTitle}>Happy Students</p>
+            <p className={page.studentsScore}>
+              4.8 (290+) <img className={page.studentsStar} src="/assets/images/star_green.png" alt="" />
+            </p>
+            <img
+              className={page.studentsAvatars}
+              src="/assets/images/people_2.png"
+              alt=""
+            />
+          </div>
         </div>
       </main>
     </div>
