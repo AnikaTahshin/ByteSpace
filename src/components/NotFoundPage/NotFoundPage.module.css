@@ -78,8 +78,8 @@
 
 @media (max-width: 420px) {
   .heading {
-    margin-top: 6px;
-    font-size: 26px;
+    margin-top: 16px;
+    font-size: 25px;
   }
 
   .heading br {
@@ -87,6 +87,11 @@
   }
 
   .hint {
+    margin-top: 18px;
     font-size: 13px;
+  }
+
+  .homeButton {
+    margin-top: 22px;
   }
 }
