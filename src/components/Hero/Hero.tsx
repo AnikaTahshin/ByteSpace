@@ -18,7 +18,7 @@ function Hero() {
       <SearchBar />
 
       <div className={styles.stage}>
-        {/* Lime arch + person */}
+
         <img
           className={styles.arch}
           src="/assets/images/ellipse.png"
@@ -30,7 +30,6 @@ function Hero() {
           alt="Student wearing headphones, smiling while holding a laptop"
         />
 
-        {/* Floating info cards */}
         <InfoCard className={styles.cardDesign} title="UI/UX Design">
           <p className={styles.cardNote}>200 Courses, 1000+ Students</p>
         </InfoCard>
@@ -66,7 +65,6 @@ function Hero() {
           />
         </InfoCard>
 
-        
       </div>
     </section>
   )

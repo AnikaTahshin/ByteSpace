@@ -4,35 +4,26 @@
   pointer-events: none;
   z-index: 1;
 }
-
 .decor img,
 .decor svg {
   position: absolute;
 }
-
-/* Lime spring — top left */
 .greenSpring {
   left: -1.5%;
   top: 26%;
   width: clamp(120px, 16vw, 235px);
 }
-
-/* Small white spring — mid left */
 .whiteSpringSmall {
   left: 14%;
   top: 48%;
   width: clamp(60px, 8vw, 115px);
   transform: rotate(-8deg);
 }
-
-/* White donut — bottom left */
 .donut {
   left: 3.5%;
   top: 70%;
   width: clamp(130px, 17vw, 250px);
 }
-
-/* White spring — bottom right */
 .whiteSpringLarge {
   left: 80%;
   top: 66%;
@@ -40,15 +31,11 @@
   transform: rotate(160deg);
   opacity: 0.95;
 }
-
-/* Lime wedge — top right, flush with the edge */
 .greenRectangle {
   right: 0;
   top: 22%;
   width: clamp(90px, 9.5vw, 140px);
 }
-
-/* White cone — mid right */
 .whiteCone {
   left: 78%;
   top: 46%;

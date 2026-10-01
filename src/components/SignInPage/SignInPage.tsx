@@ -20,7 +20,7 @@ function SignInPage() {
       </header>
 
       <main className={page.layout}>
-        {/* left: pitch + course collage */}
+
         <div className={page.pitch}>
           <h1 className={page.pitchTitle}>Sign in with ease</h1>
           <p className={page.pitchText}>

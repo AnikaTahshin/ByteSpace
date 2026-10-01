@@ -10,8 +10,6 @@
   backdrop-filter: blur(40px);
   -webkit-backdrop-filter: blur(40px);
 }
-
-/* first gradient: top-left */
 .section::before,
 .section::after {
   content: '';
@@ -26,22 +24,18 @@
     rgba(203, 252, 1, 0) 100%
   );
 }
-
 .section::before {
   width: 1137px;
   height: 1137px;
   top: -466px;
   left: -152px;
 }
-
-/* second gradient: bottom-left */
 .section::after {
   width: 672px;
   height: 672px;
   top: 52%;
   left: -200px;
 }
-
 .inner {
   display: flex;
   flex-direction: column;
@@ -49,18 +43,15 @@
   max-width: 1240px;
   margin: 0 auto;
 }
-
 .row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: clamp(40px, 6vw, 96px);
 }
-
 .copy {
   max-width: 460px;
 }
-
 .heading {
   font-family: 'Poppins', var(--font-body), sans-serif;
   font-size: clamp(28px, 2.6vw, 38px);
@@ -69,7 +60,6 @@
   letter-spacing: -0.01em;
   color: #0a0e23;
 }
-
 .subtitle {
   margin-top: 20px;
   font-size: 15px;
@@ -77,50 +67,38 @@
   line-height: 1.65;
   color: #9ea1a7;
 }
-
 .brand {
   font-weight: 700;
   color: var(--ink);
 }
-
-/* ---- Stats ---- */
-
 .stats {
   display: flex;
   gap: clamp(32px, 4vw, 56px);
   margin-top: 36px;
 }
-
 .statValue {
   font-family: 'Poppins', var(--font-body), sans-serif;
   font-size: clamp(26px, 2.2vw, 32px);
   font-weight: 600;
   color: var(--blue);
 }
-
 .statLabel {
   margin-top: 4px;
   font-size: 14px;
   color: var(--muted);
 }
-
-/* ---- Visual stages ---- */
-
 .stageLearner,
 .stageCreator {
   position: relative;
   width: min(100%, 460px);
   justify-self: center;
 }
-
 .stageLearner {
   height: clamp(320px, 34vw, 420px);
 }
-
 .stageCreator {
   height: clamp(360px, 38vw, 480px);
 }
-
 .learner {
   position: absolute;
   bottom: 0;
@@ -131,7 +109,6 @@
   -webkit-mask-image: linear-gradient(to bottom, #000 88%, transparent 100%);
   mask-image: linear-gradient(to bottom, #000 88%, transparent 100%);
 }
-
 .creator {
   position: absolute;
   bottom: 0;
@@ -142,28 +119,21 @@
   -webkit-mask-image: linear-gradient(to bottom, #000 88%, transparent 100%);
   mask-image: linear-gradient(to bottom, #000 88%, transparent 100%);
 }
-
 .squiggleTop,
 .squiggleMiddle {
   position: absolute;
   width: 135px;
-  /* width: clamp(70px, 8vw, 110px); */
 }
-
 .squiggleTop {
   top: 18%;
   right: 9px;
   z-index: 4;
 }
-
 .squiggleMiddle {
   top: 18%;
   right: 75px;
   z-index: 3;
 }
-
-/* ---- Row 1 floating cards ---- */
-
 .cardCourse {
   position: absolute;
   top: 8%;
@@ -172,27 +142,22 @@
   width: 190px;
   padding: 10px;
 }
-
 .courseThumb {
   width: 100%;
-  /* height: 88px; */
   object-fit: cover;
   border-radius: 8px;
 }
-
 .courseTitle {
   margin-top: 8px;
   font-size: 13px;
   font-weight: 700;
   color: var(--ink);
 }
-
 .courseNote {
   margin-top: 2px;
   font-size: 11px;
   color: var(--muted);
 }
-
 .courseTrack {
   height: 6px;
   margin-top: 8px;
@@ -200,21 +165,18 @@
   border-radius: 999px;
   overflow: hidden;
 }
-
 .courseFill {
   width: 25%;
   height: 100%;
   background: var(--lime);
   border-radius: 999px;
 }
-
 .courseMeta {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 8px;
 }
-
 .courseLevel {
   padding: 3px 10px;
   background: #eef1f6;
@@ -223,13 +185,11 @@
   font-weight: 500;
   color: var(--muted);
 }
-
 .coursePrice {
   font-size: 12px;
   font-weight: 700;
   color: var(--blue);
 }
-
 .cardProgress {
   position: absolute;
   top: 38%;
@@ -237,13 +197,11 @@
   z-index: 3;
   width: 200px;
 }
-
 .progressValue {
   font-size: 30px;
   font-weight: 700;
   color: var(--ink);
 }
-
 .progressTrack {
   width: 180px;
   height: 8px;
@@ -252,16 +210,12 @@
   border-radius: 999px;
   overflow: hidden;
 }
-
 .progressFill {
   width: 55%;
   height: 100%;
   background: var(--lime);
   border-radius: 999px;
 }
-
-/* ---- Row 2 floating cards ---- */
-
 .cardRevenue {
   position: absolute;
   top: 20px;
@@ -273,25 +227,21 @@
   border-radius: 14px;
   box-shadow: var(--card-shadow);
 }
-
 .cardBlueLabel {
   font-size: 12px;
   font-weight: 500;
   color: rgba(255, 255, 255, 0.85);
 }
-
 .cardBlueLabelSmall {
   font-size: 11px;
   color: rgba(255, 255, 255, 0.65);
 }
-
 .cardBlueValue {
   margin-top: 4px;
   font-size: 20px;
   font-weight: 700;
   color: var(--white);
 }
-
 .cardBlueTrack {
   height: 6px;
   margin-top: 10px;
@@ -299,14 +249,12 @@
   border-radius: 999px;
   overflow: hidden;
 }
-
 .cardBlueFill {
   width: 60%;
   height: 100%;
   background: var(--lime);
   border-radius: 999px;
 }
-
 .cardEarning {
   position: absolute;
   top: 130px;
@@ -321,7 +269,6 @@
   border-radius: 14px;
   box-shadow: var(--card-shadow);
 }
-
 .earningChip {
   padding: 3px 8px;
   background: var(--lime);
@@ -330,14 +277,12 @@
   font-weight: 700;
   color: var(--ink);
 }
-
 .cardStudents {
   position: absolute;
   bottom: 10%;
   right: 20px;
   z-index: 3;
 }
-
 .rating {
   display: flex;
   align-items: baseline;
@@ -346,25 +291,19 @@
   font-size: 12px;
   color: var(--muted);
 }
-
 .rating strong {
   font-size: 15px;
   color: var(--ink);
 }
-
 .starGreen {
   width: 14px;
   height: 14px;
   align-self: center;
 }
-
 .peopleStack {
   width: 150px;
   margin-top: 10px;
 }
-
-/* ---- Benefits checklist ---- */
-
 .benefits {
   display: flex;
   flex-direction: column;
@@ -373,7 +312,6 @@
   list-style: none;
   padding: 0;
 }
-
 .benefit {
   display: flex;
   align-items: center;
@@ -382,127 +320,100 @@
   font-weight: 500;
   color: var(--ink);
 }
-
 .checkIcon {
   flex-shrink: 0;
   width: 20px;
   height: 20px;
 }
-
-/* ---- Responsive ---- */
-
 @media (max-width: 900px) {
   .section {
     padding-inline: 24px;
   }
-
   .row {
     grid-template-columns: 1fr;
   }
-
   .row:first-child .copy {
     order: -1;
   }
-
   .copy {
     max-width: 560px;
     justify-self: center;
     text-align: center;
   }
-
   .stats {
     justify-content: center;
   }
-
   .benefits {
     align-items: flex-start;
   }
-
-  /* keep the desktop composition: fixed-aspect stage, proportional cards */
   .stageLearner,
   .stageCreator {
     width: min(100%, 460px);
     height: auto;
     aspect-ratio: 460 / 420;
   }
-
   .stageCreator {
     aspect-ratio: 460 / 460;
   }
-
   .learner {
     right: 0;
     height: 100%;
   }
-
   .creator {
     left: 10%;
     height: 100%;
   }
-
   .squiggleTop {
     top: 6%;
     right: 2%;
     width: clamp(80px, 28%, 135px);
   }
-
   .squiggleMiddle {
     top: 8%;
     right: 18%;
     width: clamp(80px, 28%, 135px);
   }
-
   .cardCourse {
     left: 0;
     top: 6%;
     width: clamp(130px, 42%, 190px);
   }
-
   .courseThumb {
     width: 100%;
   }
-
   .cardProgress {
     top: 34%;
     right: 0;
     width: clamp(150px, 52%, 200px);
   }
-
   .cardRevenue {
     top: 0;
     left: 0;
     width: clamp(130px, 44%, 170px);
   }
-
   .cardEarning {
     top: 26%;
     left: 0;
   }
-
   .cardStudents {
     right: 0;
     bottom: 4%;
   }
-
   .peopleStack {
     width: clamp(100px, 44%, 150px);
   }
 }
-
 @media (max-width: 420px) {
   .heading {
     font-size: 24px;
   }
-
   .subtitle {
     margin-top: 14px;
     font-size: 14px;
   }
-
   .statValue {
     font-size: 24px;
   }
-
   .benefit {
     font-size: 14px;
   }

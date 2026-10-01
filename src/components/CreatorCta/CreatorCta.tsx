@@ -3,7 +3,7 @@ import styles from './CreatorCta.module.css'
 function CreatorCta() {
   return (
     <section className={styles.cta}>
-      {/* decorative shapes */}
+
       <img
         className={styles.limeCurveLeft}
         src="/assets/images/lime_curve_2.png"

@@ -9,68 +9,54 @@
   background-size: 90px 90px;
   text-align: center;
 }
-
-/* ---- decorative shapes ---- */
-
 .cta img {
   position: absolute;
   pointer-events: none;
 }
-
 .limeCurveLeft {
   top: -115px;
   left: -85px;
   width: 280px;
   transform: rotate(2deg);
 }
-
 .whiteSquiggle {
   top: 5%;
   left: 10%;
   width: 175px;
   transform: rotate(-8deg);
 }
-
 .whiteCone {
   top: 35%;
   left: 0;
   width: 170px;
 }
-
 .limeCircle {
   bottom: 0px;
     left: 31px;
     width: 342px;
 }
-
 .limeCone {
   top: 7%;
   right: 12%;
   width: 188px;
   transform: rotate(10deg);
 }
-
 .whiteRect {
   top: -10px;
   right: 0;
   width: 220px;
 }
-
 .limeCurveRight {
   right: 0px;
   bottom: -145px;
   width: 330px;
 }
-
-/* ---- content ---- */
-
 .content {
   position: relative;
   z-index: 1;
   max-width: 780px;
   margin: 0 auto;
 }
-
 .heading {
   font-family: 'Poppins', var(--font-body), sans-serif;
   font-size: clamp(28px, 3vw, 42px);
@@ -78,7 +64,6 @@
   line-height: 1.25;
   color: var(--white);
 }
-
 .subtitle {
   max-width: 720px;
   margin: 22px auto 0;
@@ -87,7 +72,6 @@
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.92);
 }
-
 .button {
   display: inline-block;
   margin-top: 34px;
@@ -100,116 +84,94 @@
   text-decoration: none;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-
 .button:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
 }
-
-/* ---- Responsive ---- */
-
 @media (max-width: 900px) {
-  /* shrink the shapes and tuck them into the corners so the copy stays clear */
   .limeCurveLeft {
     top: -90px;
     left: -90px;
     width: 200px;
   }
-
   .whiteSquiggle {
     top: 24px;
     left: 4%;
     width: 80px;
   }
-
   .whiteCone {
     top: 30%;
     left: -50px;
     width: 110px;
   }
-
   .limeCircle {
     left: -110px;
     bottom: -90px;
     width: 280px;
   }
-
   .limeCone {
     top: 12px;
     right: 2%;
     width: 110px;
   }
-
   .whiteRect {
     top: -20px;
     right: -70px;
     width: 180px;
   }
-
   .limeCurveRight {
     right: -80px;
     bottom: -100px;
     width: 230px;
   }
-
   .subtitle {
     font-size: 13px;
   }
 }
-
 @media (max-width: 640px) {
   .limeCurveLeft {
     top: -90px;
     left: -100px;
     width: 160px;
   }
-
   .whiteSquiggle {
     top: 40px;
     left: 4px;
     width: 56px;
   }
-
   .whiteCone {
     top: 32%;
     left: -40px;
     width: 90px;
   }
-
   .limeCircle {
     left: -90px;
     bottom: -70px;
     width: 220px;
   }
-
   .limeCone {
     top: 12px;
     right: 2%;
     width: 90px;
   }
-
   .whiteRect {
     top: -20px;
     right: -60px;
     width: 150px;
   }
-
   .limeCurveRight {
     right: -70px;
     bottom: -90px;
     width: 190px;
   }
 }
-
 @media (max-width: 420px) {
   .heading {
     font-size: 24px;
   }
-
   .subtitle {
     font-size: 12.5px;
   }
-
   .button {
     padding: 11px 24px;
     font-size: 13px;

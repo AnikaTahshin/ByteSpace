@@ -178,11 +178,7 @@ function CourseDetailsPage({ course }: { course: Course }) {
                       {String(i + 1).padStart(2, '0')} {lesson.name}
                     </span>
                     <span className={styles.lessonDuration}>
-                      {/* <img
-                        className={styles.lessonDurationIcon}
-                        src="/assets/images/courses/video.png"
-                        alt=""
-                      /> */}
+
                       {lesson.duration}
                     </span>
                   </li>
